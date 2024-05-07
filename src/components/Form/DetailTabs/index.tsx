@@ -1,28 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-
-// import styled from 'styled-components';
-
-// const Button = styled.button`
-//   margin: 0px 15px 0 0px;
-//   padding: 0 20px;
-//   height: 58px;
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 18px;
-//   line-height: 22px;
-//   &:hover {
-//     border-bottom: 3px solid #000000;
-//   }
-//   background-color: white;
-//   border-bottom: ${({ isSelected }) =>
-//     isSelected ? '3px solid #000000' : '3px transparent solid;'};
-// `;
-
-// const Container = styled.div`
-//   margin: 0 16px 35px 16px;
-//   border-bottom: 1px solid #d2d6db;
-// `;
+import styles from './DetailTabs.module.scss'
+import { cn } from '@bcsdlab/utils';
 
 interface DetailTabsProps{
   tabs:any;
@@ -31,15 +10,18 @@ interface DetailTabsProps{
 
 function DetailTabs({ tabs, selected }:DetailTabsProps) {
   return (
-    <div>
+    <div className={styles['tab-button-section']}>
       {tabs.map((tab: { name: any; onClick: any; }) => (
         <button
+          className={cn({
+            [styles['tab-button']]:selected === tab.name,
+            [styles['tab-button--unchecked']]: selected !== tab.name,
+          })}
           key={tab.name}
           onClick={tab.onClick}
-          // isSelected={selected === tab.name}
           type="button"
         >
-          {tab.name}
+          <span>{tab.name}</span>
         </button>
       ))}
     </div>

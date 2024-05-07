@@ -1,0 +1,53 @@
+@use "src/utils/scss/media";
+
+.tab-button-section{
+  display: flex;
+  gap:40px;
+  justify-content: center;
+}
+
+.tab-button{
+  display: flex;
+  padding: 6px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: var(--Primary-10, #F5F8FF); 
+  border: none;
+
+  &>span{
+    font-family: Pretendard-Bold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    opacity: 1;
+    color: var(--Primary-50, #7EA1DB);
+    line-height: 160%; /* 44.8px */
+    letter-spacing: -0.308px;
+  }
+
+  &--unchecked {
+    color: var(--Primary-50, #7EA1DB);
+    font-family: Pretendard-Regular;
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: none;
+
+    background-color: transparent;
+
+    &>span{
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      color: var(--Primary-50, #7EA1DB);
+      line-height: 160%; /* 44.8px */
+      letter-spacing: -0.308px;
+    }
+  }
+}
