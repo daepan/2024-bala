@@ -5,7 +5,7 @@
   gap: 40px;
   justify-content: center;
 
-  @media screen {
+  @include media.media-breakpoint(mobile) {
     gap: 0px;
   }
 }
@@ -20,7 +20,7 @@
   background: var(--Primary-10, #f5f8ff);
   border: none;
 
-  @media screen {
+  @include media.media-breakpoint(mobile) {
     border-radius: 0px;
     padding: 12px 0px;
     width: 187.5px;
@@ -38,7 +38,7 @@
     line-height: 160%; /* 44.8px */
     letter-spacing: -0.308px;
 
-    @media screen {
+    @include media.media-breakpoint(mobile) {
       color: var(--Primary-50, #7ea1db);
       text-align: center;
       font-family: Pretendard;
@@ -61,7 +61,7 @@
     border: none;
     background-color: transparent;
 
-    @media screen {
+    @include media.media-breakpoint(mobile) {
       border-radius: 0px;
       padding: 12px 0px;
       width: 187.5px;
@@ -77,7 +77,7 @@
       line-height: 160%; /* 44.8px */
       letter-spacing: -0.308px;
 
-      @media screen {
+      @include media.media-breakpoint(mobile) {
         color: #898989;
         text-align: center;
         font-family: Pretendard;

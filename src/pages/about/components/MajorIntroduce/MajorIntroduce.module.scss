@@ -109,7 +109,7 @@
   gap: 76px;
   max-width: 692px;
 
-  @media screen {
+  @include media.media-breakpoint(mobile) {
     // align-self: center;
     gap: 19.96px;
     max-width: 326px;
@@ -121,12 +121,15 @@
     align-items: center;
     gap: 23px;
 
-    @media screen {
+    @include media.media-breakpoint(mobile) {
       gap: 6.98px;
     }
 
     & > img {
-      @media screen {
+      width: 179px;
+      height: 239px;
+
+      @include media.media-breakpoint(mobile) {
         width: 95.36px;
         height: 133.061px;
       }
@@ -141,7 +144,7 @@
     font-weight: 700;
     line-height: normal;
 
-    @media screen {
+    @include media.media-breakpoint(mobile) {
       color: #000;
       font-family: Pretendard;
       font-size: 12px;
