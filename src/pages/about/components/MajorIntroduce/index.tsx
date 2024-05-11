@@ -1,4 +1,5 @@
 import styles from './MajorIntroduce.module.scss';
+import useMediaQuery from 'utils/hooks/useMediaQuery';
 import Kimsungjun from './Asset/Kimsungjun.png';
 import Hongjuphyo from './Asset/Hongjuphyo.png';
 import Jeonggwangtae from './Asset/Jeonggwangtae.png';
@@ -16,8 +17,31 @@ const OTHER_PROFESSOR = [
   { img: Yoonjinpil, name: '윤진필 기술연구원' },
 ];
 
-export default function majorIntroduce() {
-  return (
+export default function MajorIntroduce() {
+  const isMobile = useMediaQuery();
+
+  return isMobile ? (
+    <div className={styles['mobile-major-introduce-section']}>
+      <div className={styles['mobile-major-introduce-title']}>학과 소개</div>
+      <div className={styles['mobile-major-introduce']}>
+        내용이 바뀔 수 있다네요..
+      </div>
+      <div className={styles['mobile-major-introduce-title']}>교수진 소개</div>
+      <div className={styles['other-professor-section']}>
+        {OTHER_PROFESSOR.map((item) => (
+          <div
+            className={styles['other-professor-section__items']}
+            key={item.name}
+          >
+            <img src={item.img} alt={item.name} />
+            <div className={styles['other-professor-section__name']}>
+              {item.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ) : (
     <div className={styles['major-introduce-section']}>
       <div className={styles['major-introduce-info-img']}>
         <div className={styles['major-introduce-info']}>
@@ -29,7 +53,6 @@ export default function majorIntroduce() {
           양성에 중점을 두고 있다
         </div>
       </div>
-
       <div className={styles['professor-introduce-section']}>
         <div className={styles.title}>교수진 소개</div>
         <div className={styles['major-professor-section']}>
