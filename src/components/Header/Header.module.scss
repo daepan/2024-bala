@@ -1,1 +1,52 @@
 @use "src/utils/scss/media";
+
+.header {
+  width: 80vw;
+  height: 29px;
+  padding: 24.5px 10vw;
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Pretendard;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &__item {
+    height: 100%;
+    color: #3B3B3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.242px;
+    line-height: 160%;
+    font-size: 22px;
+    font-weight: 500;
+
+    &--start {
+      padding-right: 32px;
+    }
+
+    &--bar {
+      padding: 0 32px ;
+      border-right: 1px solid #9C9C9C;
+      border-left: 1px solid #9C9C9C;
+      height: 21px;
+    }
+
+    &--lastbar {
+      padding: 0 32px;
+      border-right: 1px solid #9C9C9C;
+      height: 21px;
+    }
+  
+    &--end {
+      padding-left: 32px;
+    }
+  }
+}
