@@ -7,9 +7,14 @@ import styles from './MobileHeader.module.scss';
 
 export default function MobileHeader() {
   const [menuToggle, setMenuToggle] = React.useState<boolean>(false);
+  const [aboutToggle, setAboutToggle] = React.useState<boolean>(false);
   const onClickToggle = (e: React.MouseEvent<SVGElement>) => {
     e.preventDefault();
     setMenuToggle((current) => !current);
+  };
+  const onClickAboutToggle = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setAboutToggle((current) => !current);
   };
 
   return (
@@ -21,9 +26,9 @@ export default function MobileHeader() {
           [styles.header__top]: true,
           [styles['header__top--on']]: menuToggle,
       })}>
-      <MobileLogo className={cn({
-        [styles.header__logo]: menuToggle,
-      })} />
+        <MobileLogo className={cn({
+          [styles.header__logo]: menuToggle,
+        })} />
       {
         menuToggle ? (
           <XIcon 
@@ -45,8 +50,30 @@ export default function MobileHeader() {
       <div className={
         styles.menu__content
       }>
-        <div className={styles.item}>
+        <div 
+          className={cn({
+            [styles.item]: true,
+            [styles.item__first]: true,
+            [styles['item--on']]: aboutToggle,
+          })}
+          onClick={(e) => onClickAboutToggle(e)}
+        >
           ABOUT
+          <div
+            className={
+              cn({
+                [styles.item__list]: true,
+                [styles['item__list--on']]: aboutToggle,
+              })
+            }
+          >
+            <div className={styles.item__link}>
+              전시 소개
+            </div>
+            <div className={styles.item__link}>
+              학과 소개
+            </div>
+          </div>
         </div>
         <div className={styles.item}>
           PROJECT
