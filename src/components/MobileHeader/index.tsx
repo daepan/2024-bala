@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import cn from 'utils/ts/classnames';
 import { ReactComponent as MobileLogo } from 'assets/bala_logo_mobile.svg';
 import { ReactComponent as MobileMenu } from 'assets/main_menu_mobile.svg';
@@ -75,12 +76,12 @@ export default function MobileHeader() {
             </div>
           </div>
         </div>
-        <div className={styles.item}>
+        <Link className={styles.item} to="/project">
           PROJECT
-        </div>
-        <div className={styles.item}>
+        </Link>
+        <Link className={styles.item} to="/designer">
           DESIGNER
-        </div>
+        </Link>
         <div className={styles.item}>
           29th
         </div>

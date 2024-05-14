@@ -14,6 +14,7 @@
     font-family: Pretendard;
     font-size: 22px;
     font-weight: 500;
+    z-index: 99;
   }
 
   &__item {
@@ -27,6 +28,8 @@
     line-height: 160%;
     font-size: 22px;
     font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
 
     &--start {
       padding-right: 32px;
