@@ -1,1 +1,47 @@
 @use "src/utils/scss/media";
+
+.section {
+  width: 100%;
+  height: 993px;
+  background-image: url('Asset/BG.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 이미지 고정 */
+
+  &__image {
+    position: absolute;
+    right: 138.31px;
+    bottom: -164px;
+  }
+}
+
+.description {
+  position: absolute;
+  width: 447px;
+  bottom: 117px;
+  left: 201px;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: #4D4D4D;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.44px;
+    margin-bottom: 21px;
+  }
+
+  &__content {
+    color: #4D4D4D;
+    font-family: Pretendard;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: -0.242px;
+  }
+}
