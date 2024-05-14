@@ -1,0 +1,187 @@
+@use 'src/utils/scss/media';
+
+.container {
+  margin: 0 auto;
+  width: 1920px;
+}
+.exhibit-introduce-section {
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  padding: 117px 0px 0px 200px;
+}
+.title {
+  color: #6170b5;
+  width: fit-content;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 48px */
+  letter-spacing: -0.44px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #6888be;
+}
+
+.info-section {
+  display: flex;
+  align-items: end;
+  gap: 109px;
+  margin-top: 52px;
+  margin-bottom: 196px;
+
+  &__info {
+    width: 783px;
+    color: #4d4d4d;
+
+    /* Medium/22pt */
+    font-family: Pretendard;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 35.2px */
+    letter-spacing: -0.242px;
+  }
+}
+
+.category-section {
+  &__info {
+    margin-top: 14px;
+    width: fit-content;
+    color: #000;
+
+    /* Medium/20pt */
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 32px */
+  }
+
+  &__detail {
+    padding-left: 295px;
+    margin-top: 167px;
+    margin-bottom: 288px;
+    display: flex;
+    // 여기를 중간으로 하는 것이 나을지 아니면 그냥 padding 으로 미는것이 나을까..
+    // justify-content: center;
+    gap: 166px;
+  }
+
+  &__detail-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    & > span {
+      color: #636fb4;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 38.4px */
+    }
+  }
+}
+
+.exhibit-section {
+  display: flex;
+  gap: 280px;
+  margin-bottom: 135px;
+  &__info {
+    margin-top: 14px;
+    width: fit-content;
+    color: #000;
+
+    /* Medium/20pt */
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 32px */
+  }
+
+  &__detail {
+    display: flex;
+  }
+
+  &__detail-title {
+    & > span {
+      color: #000;
+
+      /* Medium/20pt */
+      font-family: Pretendard;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%; /* 32px */
+    }
+  }
+
+  &__detail-title-number {
+    list-style-type: decimal;
+    & > span {
+      color: #000;
+
+      /* Medium/20pt */
+      font-family: Pretendard;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%; /* 32px */
+    }
+  }
+
+  &__detail-info {
+    color: #000;
+
+    /* Medium/20pt */
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 32px */
+  }
+}
+
+.committee-section {
+  &__member-section {
+    margin-top: 20px;
+  }
+  &__member {
+    display: flex;
+    align-items: center;
+  }
+  &__member-group {
+    width: 128px;
+    color: #000;
+
+    /* Bold/22pt */
+    font-family: Pretendard;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 35.2px */
+    letter-spacing: -0.242px;
+  }
+  &____member-group-unit {
+    color: var(--4D, #4d4d4d);
+
+    /* Medium/22pt */
+    font-family: Pretendard;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 35.2px */
+    letter-spacing: -0.242px;
+  }
+}
+
+.sponsor-section {
+  margin-top: 95px;
+  margin-bottom: 56px;
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+}

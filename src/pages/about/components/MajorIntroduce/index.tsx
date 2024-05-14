@@ -69,7 +69,6 @@ export default function MajorIntroduce() {
               neque mauris iaculis urna odio laoreet ullamcorper.
             </div>
           </div> */}
-
           <div className={styles['other-professor-section']}>
             {OTHER_PROFESSOR.map((item) => (
               <div
