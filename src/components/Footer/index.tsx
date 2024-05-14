@@ -3,6 +3,12 @@ import useMediaQuery from 'utils/hooks/useMediaQuery';
 import { ReactComponent as YoutubeIcon } from './Asset/youtube-icon.svg';
 import { ReactComponent as InstagramIcon } from './Asset/instagram-icon.svg';
 import { ReactComponent as FooterMainIcon } from './Asset/footer-main-icon.svg';
+import { ReactComponent as KoreatechIcon } from 'Asset/koreatech.svg';
+import { ReactComponent as DscIcon } from 'Asset/dsc.svg';
+import { ReactComponent as IdeIcon } from 'Asset/ide.svg';
+import { ReactComponent as LincIcon } from 'Asset/linc.svg';
+import { ReactComponent as SeedkeeperIcon } from 'Asset/seedkeeper.svg';
+import { ReactComponent as SmartHumanInterfaceIcon } from 'Asset/smart-human-interface.svg';
 
 export default function Footer() {
   const isMobile = useMediaQuery();
@@ -34,16 +40,38 @@ export default function Footer() {
       </div>
     </div>
   ) : (
-    <div className={styles['footer-section']}>
-      <FooterMainIcon />
-      <div className={styles['footer-section__year']}>IDE 30th 졸업전시회</div>
-      <div className={styles['footer-section__address']}>
-        31253) 충청남도 천안시 동남구 병천면 충절로 1600
-        한국기술교육대학교공학2관 디자인공학전공
+    <>
+      <div className={styles['footer-section']}>
+        <FooterMainIcon className={styles['bala-icon']} />
+        <div className={styles['footer-section__year']}>
+          IDE 30th 졸업전시회
+        </div>
+        <div className={styles['footer-section__address']}>
+          31253) 충청남도 천안시 동남구 병천면 충절로 1600
+          한국기술교육대학교공학2관 디자인공학전공
+        </div>
+        <div className={styles['footer-section__copyright']}>
+          COPYRIGHT Ⓒ 2024. KOREATECH. ALL RIGHT RESERVED.
+        </div>
       </div>
-      <div className={styles['footer-section__copyright']}>
-        COPYRIGHT Ⓒ 2024. KOREATECH. ALL RIGHT RESERVED.
+      <div className={styles['footer-sponsor-section']}>
+        <div className={styles['footer-sponsor-section__icon']}>
+          <KoreatechIcon />
+          <IdeIcon />
+          <LincIcon />
+          <DscIcon />
+          <SmartHumanInterfaceIcon />
+          <SeedkeeperIcon />
+        </div>
+        <div className={styles['footer-sponsor-section__sns']}>
+          <a href="https://www.naver.com/">
+            <InstagramIcon />
+          </a>
+          <a href="https://www.naver.com/">
+            <YoutubeIcon />
+          </a>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

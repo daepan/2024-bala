@@ -29,7 +29,11 @@
   gap: 109px;
   margin-top: 52px;
   margin-bottom: 196px;
-
+  & > img {
+    width: 501px;
+    height: 708px;
+    flex-shrink: 0;
+  }
   &__info {
     width: 783px;
     color: #4d4d4d;
@@ -89,6 +93,12 @@
   display: flex;
   gap: 280px;
   margin-bottom: 135px;
+
+  & > img {
+    width: 568px;
+    height: 449px;
+  }
+
   &__info {
     margin-top: 14px;
     width: fit-content;
