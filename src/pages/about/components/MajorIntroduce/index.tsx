@@ -10,10 +10,11 @@ import Yoonjinpil from './Asset/Yoonjinpil.png';
 
 const OTHER_PROFESSOR = [
   { img: Yoonjeongsik, name: '윤정식 교수' },
-  { img: Hongjuphyo, name: '홍주표 교수' },
-  { img: Jungjuyoung, name: '정주영 교수' },
   { img: Jeonggwangtae, name: '정광태 교수' },
   { img: Kimtaegyun, name: '김태균 교수' },
+  { img: Hongjuphyo, name: '홍주표 교수' },
+  { img: Kimsungjun, name: '김성준 교수' },
+  { img: Jungjuyoung, name: '정주영 교수' },
   { img: Yoonjinpil, name: '윤진필 기술연구원' },
 ];
 
@@ -56,7 +57,7 @@ export default function MajorIntroduce() {
       <div className={styles['professor-introduce-section']}>
         <div className={styles.title}>교수진 소개</div>
         <div className={styles['major-professor-section']}>
-          <div className={styles['main-professor']}>
+          {/* <div className={styles['main-professor']}>
             <img src={Kimsungjun} alt="김성진 교수" />
             <div className={styles['main-professor__title']}>
               <div className={styles['main-professor__name']}>김성준 교수</div>
@@ -67,7 +68,7 @@ export default function MajorIntroduce() {
               Nullam elit placerat id senectus tristique nunc neque. Odio diam
               neque mauris iaculis urna odio laoreet ullamcorper.
             </div>
-          </div>
+          </div> */}
 
           <div className={styles['other-professor-section']}>
             {OTHER_PROFESSOR.map((item) => (
