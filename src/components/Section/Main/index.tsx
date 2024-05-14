@@ -1,3 +1,4 @@
+import { ReactComponent as Arrow } from './Asset/arrow.svg';
 import { ReactComponent as BlueSeed } from './Asset/blue_seed.svg';
 import styles from './Main.module.scss';
 
@@ -15,6 +16,7 @@ export default function MainSection() {
         </div>
       </div>
       <BlueSeed className={styles.section__image} />
+      <Arrow className={styles.section__arrow} />
     </div>
   )
 }

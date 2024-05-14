@@ -1,12 +1,13 @@
 import { ReactComponent as Logo } from 'assets/bala_logo.svg';
 import cn from 'utils/ts/classnames';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Header.module.scss';
 
 export default function Header() {
+  const navigate = useNavigate();
   return (
     <div className={styles.header}>
-      <Logo />
+      <Logo onClick={() => navigate('/')}/>
       <div className={styles.header__list}>
         <Link className={cn({
           [styles.header__item]: true,

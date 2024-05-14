@@ -12,7 +12,15 @@
   &__image {
     position: absolute;
     right: 138.31px;
-    bottom: -164px;
+    bottom: 0px;
+  }
+
+  &__arrow {
+    position: absolute;
+    height: 42px;
+    width: 20px;
+    bottom: 81px;
+    right: 263px;
   }
 }
 
