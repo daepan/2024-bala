@@ -53,7 +53,7 @@
 .major-professor-section {
   margin-top: 89px;
   display: flex;
-  gap: 71px;
+  flex-wrap: wrap;
 }
 
 .main-professor {
@@ -106,13 +106,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 76px;
-  max-width: 692px;
+  gap: 77px;
+  max-width: 947px;
 
   @include media.media-breakpoint(mobile) {
-    // align-self: center;
+    align-self: center;
     gap: 19.96px;
     max-width: 326px;
+    margin-top: 30px;
   }
 
   &__items {

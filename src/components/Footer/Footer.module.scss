@@ -89,3 +89,29 @@
     line-height: 160%; /* 25.6px */
   }
 }
+
+.footer-sponsor-section {
+  background: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid #d9d9d9;
+  padding: 24px 200px;
+
+  &__icon {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+  }
+  &__sns {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.bala-icon {
+  width: 331px;
+  height: 47px;
+}
