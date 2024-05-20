@@ -1,0 +1,33 @@
+@use 'src/utils/scss/media';
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 68px 0px 0px 0px;
+  overflow: auto;
+
+  @include media.media-breakpoint(mobile) {
+    display: flex;
+    justify-content: center;
+    padding: 22px 0px 197px 0px;
+  }
+}
+
+.item-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(496px, 1fr));
+  gap: 32px 16px;
+  max-width: 1520px;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+
+  @include media.media-breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 24px 7px;
+    max-width: 327px;
+    justify-items: center;
+    align-items: center;
+  }
+}

@@ -1,20 +1,30 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import styles from './DetailTabs.module.scss'
+import styles from './DetailTabs.module.scss';
 import { cn } from '@bcsdlab/utils';
 
-interface DetailTabsProps{
-  tabs:any;
+interface DetailTabsProps {
+  tabs: any;
   selected: any;
+  projectType?: boolean;
 }
 
-function DetailTabs({ tabs, selected }:DetailTabsProps) {
+function DetailTabs({ tabs, selected, projectType }: DetailTabsProps) {
   return (
-    <div className={styles['tab-button-section']}>
-      {tabs.map((tab: { name: any; onClick: any; }) => (
+    <div
+      className={cn({
+        [styles['project-tab-button-section']]: projectType === true,
+        [styles['tab-button-section']]: projectType === undefined,
+      })}
+    >
+      {tabs.map((tab: { name: any; onClick: any }) => (
         <button
           className={cn({
-            [styles['tab-button']]:selected === tab.name,
+            [styles['project-tab-button']]:
+              selected === tab.name && projectType === true,
+            [styles['project-tab-button--unchecked']]:
+              selected !== tab.name && projectType === true,
+            [styles['tab-button']]: selected === tab.name,
             [styles['tab-button--unchecked']]: selected !== tab.name,
           })}
           key={tab.name}
