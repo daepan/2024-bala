@@ -10,6 +10,17 @@
   }
 }
 
+.project-tab-button-section {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 68px;
+  @include media.media-breakpoint(mobile) {
+    gap: 8px;
+    margin-top: 40.5px;
+  }
+}
+
 .tab-button {
   display: flex;
   padding: 6px 16px;
@@ -84,6 +95,86 @@
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
+        line-height: 160%; /* 25.6px */
+      }
+    }
+  }
+}
+
+.project-tab-button {
+  display: flex;
+  padding: 6px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: var(--Primary-10, #f5f8ff);
+  border: none;
+
+  @include media.media-breakpoint(mobile) {
+    border-radius: 0px;
+    padding: 6px 16px;
+    border-radius: 8px;
+    width: fit-content;
+  }
+
+  & > span {
+    font-family: Pretendard-Bold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    opacity: 1;
+    color: var(--Primary-50, #7ea1db);
+    line-height: 160%; /* 44.8px */
+    letter-spacing: -0.308px;
+
+    @include media.media-breakpoint(mobile) {
+      color: var(--Primary-50, #7ea1db);
+
+      /* Bold/16pt */
+      font-family: Pretendard;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  &--unchecked {
+    color: var(--Primary-50, #7ea1db);
+    font-family: Pretendard-Regular;
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+
+    @include media.media-breakpoint(mobile) {
+      border-radius: 0px;
+      padding: 6px 16px;
+      width: fit-content;
+    }
+
+    & > span {
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      color: var(--Primary-50, #7ea1db);
+      line-height: 160%; /* 44.8px */
+      letter-spacing: -0.308px;
+
+      @include media.media-breakpoint(mobile) {
+        color: var(--Primary-50, #7ea1db);
+
+        /* Regular/16pt */
+        font-family: Pretendard;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
         line-height: 160%; /* 25.6px */
       }
     }

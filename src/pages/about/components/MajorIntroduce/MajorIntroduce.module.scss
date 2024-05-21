@@ -108,12 +108,14 @@
   flex-wrap: wrap;
   gap: 77px;
   max-width: 947px;
+  margin-bottom: 103.25px;
 
   @include media.media-breakpoint(mobile) {
     align-self: center;
     gap: 19.96px;
     max-width: 326px;
     margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   &__items {
@@ -159,7 +161,6 @@
 .mobile-major-introduce-section {
   display: flex;
   flex-direction: column;
-  // align-items: center;
   padding: 40px 24px 153px 24px;
 }
 

@@ -1,0 +1,4 @@
+@use 'src/utils/scss/media';
+
+@include media.media-breakpoint(mobile) {
+}
