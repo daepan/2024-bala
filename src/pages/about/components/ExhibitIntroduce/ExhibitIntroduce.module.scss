@@ -3,16 +3,41 @@
 .container {
   margin: 0 auto;
   max-width: 1920px;
+
   @include media.media-breakpoint(mobile) {
     min-width: 375px;
-    & > img {
-      display: flex;
-      margin: 0 auto;
-      width: 375px;
-      height: 530px;
-      flex-shrink: 0;
-    }
+    // & > img {
+    //   display: flex;
+    //   margin: 0 auto;
+    //   // width: 375px;
+    //   // height: 530px;
+
+    //   max-width: 375px;
+    //   max-height: 530px;
+    //   height: auto;
+
+    //   flex-shrink: 0;
+    // }
   }
+}
+
+.mobile-bala-poster {
+  display: flex;
+  margin: 0 auto;
+  // width: 375px;
+  // height: 530px;
+
+  max-width: 375px;
+  max-height: 530px;
+  height: auto;
+
+  flex-shrink: 0;
+}
+
+.bala-poster {
+  max-width: 501px;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .exhibit-introduce-section {
@@ -57,11 +82,16 @@
   margin-top: 52px;
   margin-bottom: 196px;
 
-  & > img {
-    width: 501px;
-    height: 708px;
-    flex-shrink: 0;
-  }
+  // & > img {
+  //   // width: 501px;
+  //   // height: 708px;
+
+  //   max-height: 708px;
+  //   max-width: 501px;
+  //   height: auto;
+  //   width: auto;
+  //   flex-shrink: 0;
+  // }
   &__info {
     width: 783px;
     color: #4d4d4d;
@@ -118,12 +148,12 @@
   }
 
   &__detail {
-    padding-left: 295px;
+    //padding-left: 295px;
     margin-top: 167px;
     margin-bottom: 288px;
     display: flex;
     // 여기를 중간으로 하는 것이 나을지 아니면 그냥 padding 으로 미는것이 나을까..
-    // justify-content: center;
+    justify-content: center;
     gap: 166px;
     flex-wrap: wrap;
 
@@ -182,8 +212,11 @@
     margin-bottom: 74px;
   }
   & > img {
-    width: 568px;
-    height: 449px;
+    //max-width: 568px;
+    max-height: 449px;
+    max-width: 100%;
+    height: auto;
+
     @include media.media-breakpoint(mobile) {
       display: flex;
       margin: 0 auto;

@@ -49,7 +49,13 @@ function ExhibitIntroduce() {
   return (
     <>
       <div className={styles['container']}>
-        {isMobile && <img src={balaPoster} alt="발아 졸업 전시회 포스터" />}
+        {isMobile && (
+          <img
+            className={styles['mobile-bala-poster']}
+            src={balaPoster}
+            alt="발아 졸업 전시회 포스터"
+          />
+        )}
         <div className={styles['exhibit-introduce-section']}>
           {isMobile ? (
             <>
@@ -80,7 +86,11 @@ function ExhibitIntroduce() {
             <>
               <div className={styles['title']}>전시 소개</div>
               <div className={styles['info-section']}>
-                <img src={balaPoster} alt="발아 졸업 전시회 포스터" />
+                <img
+                  className={styles['bala-poster']}
+                  src={balaPoster}
+                  alt="발아 졸업 전시회 포스터"
+                />
                 <div className={styles['info-section__info']}>
                   씨앗에서부터 더 높은 단계로 나아가기 위한 출발. 발아는 단순한
                   생명의 시작을 넘어, 가능성과 희망, 그리고 무한한 잠재력의
