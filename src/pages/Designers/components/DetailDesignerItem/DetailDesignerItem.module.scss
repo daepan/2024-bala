@@ -1,0 +1,95 @@
+@use 'src/utils/scss/media';
+
+.designer-button {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  // width: 496px;
+  // height: 428px;
+  border-radius: 12px;
+  background: #fff;
+
+  &:hover {
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.04),
+      0px 8px 32px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  @include media.media-breakpoint(mobile) {
+    display: flex;
+    width: 160px;
+    height: auto;
+    padding: 4px;
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.designer-image {
+  border-radius: 12px;
+  @include media.media-breakpoint(mobile) {
+    border-radius: 8px;
+  }
+}
+
+.designer-info {
+  display: flex;
+  padding: 24px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  @include media.media-breakpoint(mobile) {
+    padding: 0;
+  }
+
+  &__eng-name {
+    color: #8e8e8e;
+
+    /* Medium/18pt */
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 28.8px */
+
+    @include media.media-breakpoint(mobile) {
+      padding-top: 9.97px;
+      color: #000;
+      font-family: Pretendard;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__designers-name {
+    color: #1f1f1f;
+
+    /* Bold/28pt */
+    font-family: Pretendard;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 142.857% */
+    letter-spacing: -0.308px;
+
+    @include media.media-breakpoint(mobile) {
+      // padding-top: 1.97px;
+      color: #000;
+      font-family: Pretendard;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}

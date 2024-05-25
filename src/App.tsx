@@ -4,6 +4,7 @@ import IndexPage from './pages/index';
 import About from './pages/About';
 import Project from 'pages/Project';
 import DetailProject from 'pages/DetailProject';
+import Designers from 'pages/Designers';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/project" element={<Project />} />
         <Route path="/project/:id" element={<DetailProject />} />
+        <Route path="/designers" element={<Designers />} />
+        {/* <Route path="/designers/:id" element={<DetaiDesigners />} /> */}
       </Route>
     </Routes>
   );
