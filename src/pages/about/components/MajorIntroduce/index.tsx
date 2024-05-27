@@ -54,10 +54,8 @@ export default function MajorIntroduce() {
           양성에 중점을 두고 있다
         </div>
       </div>
-      <div className={styles['professor-introduce-section']}>
-        <div className={styles.title}>교수진 소개</div>
-        <div className={styles['major-professor-section']}>
-          {/* <div className={styles['main-professor']}>
+      <div className={styles.title}>교수진 소개</div>
+      {/* <div className={styles['main-professor']}>
             <img src={Kimsungjun} alt="김성진 교수" />
             <div className={styles['main-professor__title']}>
               <div className={styles['main-professor__name']}>김성준 교수</div>
@@ -69,20 +67,18 @@ export default function MajorIntroduce() {
               neque mauris iaculis urna odio laoreet ullamcorper.
             </div>
           </div> */}
-          <div className={styles['other-professor-section']}>
-            {OTHER_PROFESSOR.map((item) => (
-              <div
-                className={styles['other-professor-section__items']}
-                key={item.name}
-              >
-                <img src={item.img} alt={item.name} />
-                <div className={styles['other-professor-section__name']}>
-                  {item.name}
-                </div>
-              </div>
-            ))}
+      <div className={styles['other-professor-section']}>
+        {OTHER_PROFESSOR.map((item) => (
+          <div
+            className={styles['other-professor-section__items']}
+            key={item.name}
+          >
+            <img src={item.img} alt={item.name} />
+            <div className={styles['other-professor-section__name']}>
+              {item.name}
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );

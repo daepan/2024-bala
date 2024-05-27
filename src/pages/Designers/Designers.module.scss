@@ -1,0 +1,59 @@
+@use 'src/utils/scss/media';
+
+.container {
+  padding-top: 93px;
+  display: flex;
+  flex-direction: column;
+
+  @include media.media-breakpoint(mobile) {
+    padding-top: 71px;
+  }
+}
+
+.title {
+  margin: 0 auto;
+  color: var(--P, #a8a6d2);
+  text-align: center;
+
+  /* Bold/28pt */
+  font-family: Pretendard;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px; /* 142.857% */
+  letter-spacing: -0.308px;
+
+  @include media.media-breakpoint(mobile) {
+  }
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+  padding: 68px 0px 0px 0px;
+
+  @include media.media-breakpoint(mobile) {
+    display: flex;
+    justify-content: center;
+    padding: 22px 0px 197px 0px;
+  }
+}
+
+.item-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(332px, 1fr));
+  gap: 40px 16px;
+  max-width: 1376px;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+
+  @include media.media-breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+    gap: 9px;
+    max-width: 331px;
+    justify-items: center;
+    align-items: center;
+  }
+}

@@ -6,7 +6,8 @@ export default function Header() {
     <div>
       Header
       <button onClick={() => navigate('/about')}>About</button>
-      <button onClick={() => navigate('/Project')}>Project</button>
+      <button onClick={() => navigate('/project')}>Project</button>
+      <button onClick={() => navigate('/designers')}>Designers</button>
     </div>
   );
 }

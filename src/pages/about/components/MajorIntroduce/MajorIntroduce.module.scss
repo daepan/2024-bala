@@ -11,8 +11,12 @@
 
 .major-introduce-info-img {
   position: relative;
-  width: 1517px;
+  width: 100%;
+  max-width: 1517px;
   height: 640px;
+  overflow: auto;
+  background-size: cover;
+  background-position: center;
   background-image: url('./Asset/majorIntroduceBackImg.png');
 }
 
@@ -30,13 +34,6 @@
   letter-spacing: -0.242px;
 }
 
-.professor-introduce-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .title {
   color: #6170b5;
   width: fit-content;
@@ -52,8 +49,44 @@
 
 .major-professor-section {
   margin-top: 89px;
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+
+  // display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  // gap: 77px 36px;
+  // max-width: 1126px;
+  // width: 100%;
+  // justify-items: center;
+  // align-items: center;
+
+  // @include media.media-breakpoint(mobile) {
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  //   gap: 11px 20px;
+  //   max-width: 325px;
+  //   justify-items: center;
+  //   align-items: center;
+  // }
+}
+
+.item-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(496px, 1fr));
+  gap: 32px 16px;
+  max-width: 1520px;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+
+  @include media.media-breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 24px 7px;
+    max-width: 327px;
+    justify-items: center;
+    align-items: center;
+  }
 }
 
 .main-professor {
@@ -103,17 +136,23 @@
 }
 
 .other-professor-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 77px;
-  max-width: 947px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  gap: 36px 77px;
+  max-width: 1127px;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
   margin-bottom: 103.25px;
 
   @include media.media-breakpoint(mobile) {
-    align-self: center;
-    gap: 19.96px;
-    max-width: 326px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    gap: 11px 20px;
+    max-width: 325px;
+    justify-items: center;
+    align-items: center;
     margin-top: 30px;
     margin-bottom: 0px;
   }
@@ -165,7 +204,7 @@
 }
 
 .mobile-major-introduce {
-  height: 300px;
+  max-height: 300px;
 }
 
 .mobile-major-introduce-title {
