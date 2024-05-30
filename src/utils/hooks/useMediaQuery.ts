@@ -25,7 +25,6 @@ export default function useMediaQuery(query = MOBILE_QUERY): boolean {
     return () => {
       matchMediaRef.current?.removeEventListener('change', handleChange);
     };
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
