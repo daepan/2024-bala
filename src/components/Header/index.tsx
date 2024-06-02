@@ -26,7 +26,7 @@ export default function Header() {
         <Link className={cn({
           [styles.header__item]: true,
           [styles['header__item--lastbar']]: true,
-          [styles['header__item--bold']]: location.pathname === '/designer',
+          [styles['header__item--bold']]: location.pathname === '/designers',
         })}
         to="/designers">Designers</Link>
         <div className={cn({
