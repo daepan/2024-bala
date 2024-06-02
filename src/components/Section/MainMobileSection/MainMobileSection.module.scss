@@ -1,0 +1,63 @@
+@use "src/utils/scss/media";
+
+.section {
+  width: 100vw;
+  height: 726px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 84px;
+
+  &__image {
+    width: 446.389px;
+    height: 446.389px;
+    transform: rotate(-3.765deg);
+    position: absolute;
+    right: -20px;
+    flex-shrink: 0;
+    z-index: -3;
+  }
+
+  &__describe {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 338px;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  &__title {
+    color: #646AB0;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5.2px;
+  }
+}
+
+.content {
+  color: #646AB0;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 52px;
+}
