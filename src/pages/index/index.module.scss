@@ -2,6 +2,6 @@
 
 .content {
   @include media.media-breakpoint(mobile) {
-    margin-top: 84px;
+    padding-top: 84px;
   }
 }

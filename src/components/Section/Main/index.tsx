@@ -27,6 +27,10 @@ export default function MainSection({
   return (
     <div className={styles.section}>
       <div className={styles.description} ref={ref}>
+        <div className={styles.description__intro}>
+          한국기술교육대학교 <br />
+          디자인공학과 30th 졸업 전시
+        </div>
         <div className={styles.description__title}>
           씨앗에서부터 더 높은 단계로<br />
           나아가기 위한 출발.
