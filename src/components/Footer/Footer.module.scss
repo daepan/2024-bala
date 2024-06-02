@@ -1,6 +1,7 @@
 @use 'src/utils/scss/media';
 
 .mobile-footer-section {
+  width: calc(100vw - 67px);
   padding: 39px 25px 42px 24px;
   background: #f2f2f2;
 
