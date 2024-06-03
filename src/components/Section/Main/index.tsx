@@ -22,7 +22,7 @@ export default function MainSection({
 }: MainSectionProps) {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300); 
+  const y = useParallax(scrollYProgress, 400); 
 
   return (
     <div className={styles.section}>

@@ -23,7 +23,7 @@ export default function MainMobileSection({
 }: MainMobileSectionProps) {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 350); 
+  const y = useParallax(scrollYProgress, 300); 
 
   return (
     <div className={styles.section}>

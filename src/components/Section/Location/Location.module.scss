@@ -21,6 +21,8 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    width: calc(100vw - 400px);
+    padding: 0 200px;
 
     @include media.media-breakpoint(mobile) {
       flex-direction: column;
