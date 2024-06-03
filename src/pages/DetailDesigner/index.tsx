@@ -7,7 +7,13 @@ function DetailDesigner() {
   return (
     <div className={styles.template}>
       <div className={styles.profile}>
-        <div className={styles.profile__image}>이미지</div>
+        <div className={styles.profile__image}>
+          이미지
+          <div className={styles['name--mobile']}>
+            <div className={styles['name__title--mobile']}>이름</div>
+            <div className={styles['name__en--mobile']}>영어이름</div>
+          </div>
+        </div>
         <div className={styles.profile__info}>
           <div className={styles.name}>
             <div className={styles.name__title}>이름</div>
