@@ -116,3 +116,11 @@
   width: 331px;
   height: 47px;
 }
+
+.footer {
+  height: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

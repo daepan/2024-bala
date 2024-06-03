@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
     </div>
   ) : (
-    <>
+    <div className={styles.footer}>
       <div className={styles['footer-section']}>
         <FooterMainIcon className={styles['bala-icon']} />
         <div className={styles['footer-section__year']}>
@@ -72,6 +72,6 @@ export default function Footer() {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }
