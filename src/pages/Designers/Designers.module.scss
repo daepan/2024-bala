@@ -57,3 +57,10 @@
     align-items: center;
   }
 }
+
+.top-button {
+  z-index: 1000;
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+}

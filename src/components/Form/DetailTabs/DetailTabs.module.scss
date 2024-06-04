@@ -4,9 +4,22 @@
   display: flex;
   gap: 40px;
   justify-content: center;
+  margin-top: 51px;
+  transition: none;
 
   @include media.media-breakpoint(mobile) {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
     gap: 0px;
+    margin-top: 0px;
+    background-color: white;
+    transition: transform 0.3s ease;
+
+    &--hide {
+      transform: translateY(-101%);
+      transition: transform 0.3s ease;
+    }
   }
 }
 

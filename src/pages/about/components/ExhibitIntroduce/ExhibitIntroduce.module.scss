@@ -1,11 +1,13 @@
 @use 'src/utils/scss/media';
 
 .container {
+  position: relative;
   margin: 0 auto;
   max-width: 1920px;
 
   @include media.media-breakpoint(mobile) {
     min-width: 375px;
+    padding-top: 51px;
     // & > img {
     //   display: flex;
     //   margin: 0 auto;

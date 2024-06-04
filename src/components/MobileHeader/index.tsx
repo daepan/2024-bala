@@ -21,77 +21,65 @@ export default function MobileHeader() {
   };
 
   return (
-    <div className={cn({
-      [styles.header]: true,
-      [styles['header--on']]: menuToggle,
-    })}>
-      <div className={cn({
+    <div
+      className={cn({
+        [styles.header]: true,
+        [styles['header--on']]: menuToggle,
+      })}
+    >
+      <div
+        className={cn({
           [styles.header__top]: true,
           [styles['header__top--on']]: menuToggle,
-      })}>
-        <MobileLogo 
+        })}
+      >
+        <MobileLogo
           className={cn({
             [styles.header__logo]: menuToggle,
-          })} 
+          })}
           onClick={() => navigate('/')}
         />
-      {
-        menuToggle ? (
-          <XIcon 
-            onClick={(e) => onClickToggle(e)}
-            aria-hidden
-          />
+        {menuToggle ? (
+          <XIcon onClick={(e) => onClickToggle(e)} aria-hidden />
         ) : (
-          <MobileMenu
-            onClick={(e) => onClickToggle(e)}
-            aria-hidden
-          />
-        )
-      }
-     </div>
-     <div className={cn({
-        [styles.menu]: true,
-        [styles['menu--on']]: menuToggle,
-      })}>
-      <div className={
-        styles.menu__content
-      }>
-        <div 
-          className={cn({
-            [styles.item]: true,
-            [styles.item__first]: true,
-            [styles['item--on']]: aboutToggle,
-          })}
-          onClick={(e) => onClickAboutToggle(e)}
-        >
-          ABOUT
+          <MobileMenu onClick={(e) => onClickToggle(e)} aria-hidden />
+        )}
+      </div>
+      <div
+        className={cn({
+          [styles.menu]: true,
+          [styles['menu--on']]: menuToggle,
+        })}
+      >
+        <div className={styles.menu__content}>
           <div
-            className={
-              cn({
+            className={cn({
+              [styles.item]: true,
+              [styles.item__first]: true,
+              [styles['item--on']]: aboutToggle,
+            })}
+            onClick={(e) => onClickAboutToggle(e)}
+          >
+            ABOUT
+            <div
+              className={cn({
                 [styles.item__list]: true,
                 [styles['item__list--on']]: aboutToggle,
-              })
-            }
-          >
-            <div className={styles.item__link}>
-              전시 소개
-            </div>
-            <div className={styles.item__link}>
-              학과 소개
+              })}
+            >
+              <div className={styles.item__link}>전시 소개</div>
+              <div className={styles.item__link}>학과 소개</div>
             </div>
           </div>
-        </div>
-        <Link className={styles.item} to="/project">
-          PROJECT
-        </Link>
-        <Link className={styles.item} to="/designer">
-          DESIGNER
-        </Link>
-        <div className={styles.item}>
-          29th
+          <Link className={styles.item} to="/project">
+            PROJECT
+          </Link>
+          <Link className={styles.item} to="/designer">
+            DESIGNER
+          </Link>
+          <div className={styles.item}>29th</div>
         </div>
       </div>
-     </div>
     </div>
   );
 }

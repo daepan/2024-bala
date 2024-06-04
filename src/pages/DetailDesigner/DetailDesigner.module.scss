@@ -1,6 +1,5 @@
 @use 'src/utils/scss/media';
 
-
 .template {
   width: 100%;
   display: flex;
@@ -44,7 +43,7 @@
   &__info {
     width: 564px;
     margin-left: 132px;
-  
+
     @include media.media-breakpoint(mobile) {
       width: calc(100% - 48px);
       padding: 0 24px;
@@ -74,20 +73,20 @@
   }
 
   &__title {
-    color:  #262626;
+    color: #262626;
     font-family: Pretendard;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 48px */
     letter-spacing: -0.44px;
-  
+
     &--mobile {
       display: none;
-  
+
       @include media.media-breakpoint(mobile) {
         display: flex;
-        color: #FFF;
+        color: #fff;
         font-family: Pretendard;
         height: 38px;
         font-size: 24px;
@@ -100,7 +99,7 @@
   }
 
   &__en {
-    color: #BFBFBF;
+    color: #bfbfbf;
     font-family: Pretendard;
     font-size: 16px;
     font-style: normal;
@@ -112,10 +111,10 @@
 
     &--mobile {
       display: none;
-  
+
       @include media.media-breakpoint(mobile) {
         display: flex;
-        color:#FFF;
+        color: #fff;
         font-family: Pretendard;
         height: 29px;
         font-size: 18px;
@@ -135,7 +134,7 @@
   height: 59px;
   padding: 16px;
   border-radius: 8px;
-  background:#F5F8FF;
+  background: #f5f8ff;
   margin-bottom: 36px;
 
   @include media.media-breakpoint(mobile) {
@@ -147,7 +146,7 @@
   }
 
   &__header {
-    color: #B9D3FF;
+    color: #b9d3ff;
     font-family: Pretendard;
     font-size: 16px;
     font-style: normal;
@@ -156,7 +155,7 @@
     margin-bottom: 8px;
 
     @include media.media-breakpoint(mobile) {
-      color:  #B9D3FF;
+      color: #b9d3ff;
       font-family: Pretendard;
       font-size: 14px;
       font-style: normal;
@@ -166,7 +165,7 @@
   }
 
   &__content {
-    color:#7EA1DB;
+    color: #7ea1db;
     font-family: Pretendard;
     font-size: 20px;
     font-style: normal;
@@ -175,7 +174,7 @@
     letter-spacing: -0.22px;
 
     @include media.media-breakpoint(mobile) {
-      color:#7EA1DB;
+      color: #7ea1db;
       font-family: Pretendard;
       font-size: 18px;
       font-style: normal;
@@ -237,20 +236,20 @@
 
   &__title {
     width: 83px;
-    color: #6170B5;
+    color: #6170b5;
     font-family: Pretendard;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 48px */
     letter-spacing: -0.44px;
-    border-bottom: 3px solid #6170B5;
+    border-bottom: 3px solid #6170b5;
     justify-content: center;
     align-items: center;
 
     @include media.media-breakpoint(mobile) {
       width: 39px;
-      color: #6170B5;
+      color: #6170b5;
       font-family: Pretendard;
       font-size: 18px;
       font-style: normal;
@@ -280,7 +279,7 @@
 
   &__head {
     width: 100%;
-    color:#454545;
+    color: #454545;
     font-family: Pretendard;
     font-size: 24px;
     font-style: normal;
@@ -297,7 +296,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
-      border-bottom: 0.5px solid #6888BE;
+      border-bottom: 0.5px solid #6888be;
       padding-bottom: 9px;
       margin-bottom: 9px;
     }
@@ -333,3 +332,9 @@
   }
 }
 
+.top-button {
+  z-index: 1000;
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+}

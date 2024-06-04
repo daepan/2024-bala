@@ -1,1 +1,8 @@
-@use "src/utils/scss/media";
+@use 'src/utils/scss/media';
+
+.top-button {
+  z-index: 1000;
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+}
