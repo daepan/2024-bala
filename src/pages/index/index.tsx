@@ -3,6 +3,7 @@ import Header from 'components/Header';
 import MobileHeader from 'components/MobileHeader';
 import Footer from 'components/Footer';
 import { Outlet } from 'react-router-dom';
+import styles from './index.module.scss';
 
 export default function IndexPage() {
   const isMobile = useMediaQuery();
@@ -11,7 +12,9 @@ export default function IndexPage() {
       {
         isMobile ? <MobileHeader /> : <Header />
       }
-        <Outlet />
+        <div className={styles.content}>
+          <Outlet />
+        </div>
       <Footer />
     </>
   )

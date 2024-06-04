@@ -1,9 +1,9 @@
 @use "src/utils/scss/media";
 
 .template {
-  width: 100vw;
+  width: 100%;
 
   @include media.media-breakpoint(mobile) {
-    padding-top: 84px;
+    padding-top: 40px;
   }
 }

@@ -44,6 +44,7 @@
     padding: 28.4px 14px 17px;
     background-color: #FFF;
     z-index: 999;
+    cursor: pointer;
   
     @include media.media-breakpoint(mobile) {
       width: calc(100% - 48px);

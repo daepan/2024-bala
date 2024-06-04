@@ -22,11 +22,15 @@ export default function MainSection({
 }: MainSectionProps) {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300); 
+  const y = useParallax(scrollYProgress, 400); 
 
   return (
     <div className={styles.section}>
       <div className={styles.description} ref={ref}>
+        <div className={styles.description__intro}>
+          한국기술교육대학교 <br />
+          디자인공학과 30th 졸업 전시
+        </div>
         <div className={styles.description__title}>
           씨앗에서부터 더 높은 단계로<br />
           나아가기 위한 출발.

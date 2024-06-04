@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import cn from 'utils/ts/classnames';
+import { useNavigate } from 'react-router-dom';
 import { ReactComponent as MobileLogo } from 'assets/bala_logo_mobile.svg';
 import { ReactComponent as MobileMenu } from 'assets/main_menu_mobile.svg';
 import { ReactComponent as XIcon } from 'assets/close.svg';
@@ -9,6 +10,7 @@ import styles from './MobileHeader.module.scss';
 export default function MobileHeader() {
   const [menuToggle, setMenuToggle] = React.useState<boolean>(false);
   const [aboutToggle, setAboutToggle] = React.useState<boolean>(false);
+  const navigate = useNavigate();
   const onClickToggle = (e: React.MouseEvent<SVGElement>) => {
     e.preventDefault();
     setMenuToggle((current) => !current);
@@ -27,9 +29,12 @@ export default function MobileHeader() {
           [styles.header__top]: true,
           [styles['header__top--on']]: menuToggle,
       })}>
-        <MobileLogo className={cn({
-          [styles.header__logo]: menuToggle,
-        })} />
+        <MobileLogo 
+          className={cn({
+            [styles.header__logo]: menuToggle,
+          })} 
+          onClick={() => navigate('/')}
+        />
       {
         menuToggle ? (
           <XIcon 

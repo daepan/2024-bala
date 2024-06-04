@@ -1,0 +1,7 @@
+@use 'src/utils/scss/media';
+
+.content {
+  @include media.media-breakpoint(mobile) {
+    padding-top: 84px;
+  }
+}
