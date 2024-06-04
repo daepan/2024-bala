@@ -7,6 +7,7 @@ import Jungjuyoung from './Asset/Jungjuyoung.png';
 import Kimtaegyun from './Asset/Kimtaegyun.png';
 import Yoonjeongsik from './Asset/Yoonjeongsik.png';
 import Yoonjinpil from './Asset/Yoonjinpil.png';
+import TopButton from 'components/TopButton';
 
 const OTHER_PROFESSOR = [
   { img: Yoonjeongsik, name: '윤정식 교수' },

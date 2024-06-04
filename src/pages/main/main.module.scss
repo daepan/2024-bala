@@ -1,4 +1,4 @@
-@use "src/utils/scss/media";
+@use 'src/utils/scss/media';
 
 .template {
   width: 100%;
@@ -6,4 +6,15 @@
   @include media.media-breakpoint(mobile) {
     padding-top: 40px;
   }
+}
+
+.top-button {
+  z-index: 1000;
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+  // :hover {
+  //   cursor: pointer;
+  // }
+  // svg영역이 이상하게 잡혀있어서 오버한 hover가 생김
 }
