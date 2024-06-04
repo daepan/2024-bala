@@ -5,6 +5,7 @@
   gap: 40px;
   justify-content: center;
   margin-top: 51px;
+  transition: none;
 
   @include media.media-breakpoint(mobile) {
     position: fixed;
@@ -14,10 +15,11 @@
     margin-top: 0px;
     background-color: white;
     transition: transform 0.3s ease;
-  }
-  &--hide {
-    transform: translateY(-101%);
-    transition: transform 0.3s ease;
+
+    &--hide {
+      transform: translateY(-101%);
+      transition: transform 0.3s ease;
+    }
   }
 }
 
