@@ -7,14 +7,17 @@ interface DetailTabsProps {
   tabs: any;
   selected: any;
   projectType?: boolean;
+  showNav?: boolean;
 }
 
-function DetailTabs({ tabs, selected, projectType }: DetailTabsProps) {
+function DetailTabs({ tabs, selected, projectType, showNav }: DetailTabsProps) {
   return (
     <div
       className={cn({
         [styles['project-tab-button-section']]: projectType === true,
         [styles['tab-button-section']]: projectType === undefined,
+        [styles['tab-button-section--hide']]: showNav === false,
+        // [styles['hide-nav']]: showNav === false,
       })}
     >
       {tabs.map((tab: { name: any; onClick: any }) => (

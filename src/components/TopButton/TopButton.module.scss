@@ -3,4 +3,7 @@
 .scroll-to-top {
   border: none;
   background: none;
+  & > svg {
+    cursor: pointer;
+  }
 }

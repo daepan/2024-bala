@@ -7,6 +7,7 @@
 
   @include media.media-breakpoint(mobile) {
     min-width: 375px;
+    padding-top: 51px;
     // & > img {
     //   display: flex;
     //   margin: 0 auto;
