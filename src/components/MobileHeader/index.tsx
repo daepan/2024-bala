@@ -13,42 +13,42 @@ export default function MobileHeader() {
   const navigate = useNavigate();
   const onClickToggle = (e: React.MouseEvent<SVGElement>) => {
     e.preventDefault();
-    setMenuToggle((current) => !current);
+    setMenuToggle(current => !current);
   };
   const onClickAboutToggle = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
-    setAboutToggle((current) => !current);
+    setAboutToggle(current => !current);
   };
 
   return (
     <div
       className={cn({
         [styles.header]: true,
-        [styles['header--on']]: menuToggle,
+        [styles['header--on']]: menuToggle
       })}
     >
       <div
         className={cn({
           [styles.header__top]: true,
-          [styles['header__top--on']]: menuToggle,
+          [styles['header__top--on']]: menuToggle
         })}
       >
         <MobileLogo
           className={cn({
-            [styles.header__logo]: menuToggle,
+            [styles.header__logo]: menuToggle
           })}
           onClick={() => navigate('/')}
         />
         {menuToggle ? (
-          <XIcon onClick={(e) => onClickToggle(e)} aria-hidden />
+          <XIcon onClick={e => onClickToggle(e)} aria-hidden />
         ) : (
-          <MobileMenu onClick={(e) => onClickToggle(e)} aria-hidden />
+          <MobileMenu onClick={e => onClickToggle(e)} aria-hidden />
         )}
       </div>
       <div
         className={cn({
           [styles.menu]: true,
-          [styles['menu--on']]: menuToggle,
+          [styles['menu--on']]: menuToggle
         })}
       >
         <div className={styles.menu__content}>
@@ -56,15 +56,15 @@ export default function MobileHeader() {
             className={cn({
               [styles.item]: true,
               [styles.item__first]: true,
-              [styles['item--on']]: aboutToggle,
+              [styles['item--on']]: aboutToggle
             })}
-            onClick={(e) => onClickAboutToggle(e)}
+            onClick={e => onClickAboutToggle(e)}
           >
             ABOUT
             <div
               className={cn({
                 [styles.item__list]: true,
-                [styles['item__list--on']]: aboutToggle,
+                [styles['item__list--on']]: aboutToggle
               })}
             >
               <div className={styles.item__link}>전시 소개</div>
@@ -77,7 +77,9 @@ export default function MobileHeader() {
           <Link className={styles.item} to="/designer">
             DESIGNER
           </Link>
-          <div className={styles.item}>29th</div>
+          <a className={styles.item} href="http://ide-2023.com/main">
+            29th
+          </a>
         </div>
       </div>
     </div>
