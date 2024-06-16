@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Main from './pages/main';
 import IndexPage from './pages/index';
 import Project from 'pages/Project';
-import About from 'pages/about';
+import About from 'pages/About';
 import DetailProject from 'pages/DetailProject';
 import Designers from 'pages/Designers';
 import DetailDesigner from 'pages/DetailDesigner';
