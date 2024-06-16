@@ -56,18 +56,28 @@ export default function Footer() {
       </div>
       <div className={styles['footer-sponsor-section']}>
         <div className={styles['footer-sponsor-section__icon']}>
-          <KoreatechIcon />
-          <IdeIcon />
-          <LincIcon />
-          <DscIcon />
+          <a href="https://www.koreatech.ac.kr/kor/">
+            <KoreatechIcon />
+          </a>
+          <a href="https://www.koreatech.ac.kr/ide/">
+            <IdeIcon />
+          </a>
+          <a href="https://lincthree.nrf.re.kr/#/">
+            <LincIcon />
+          </a>
+          <a href="https://www.dscu.ac.kr/">
+            <DscIcon />
+          </a>
           <SmartHumanInterfaceIcon />
-          <SeedkeeperIcon />
+          <a href="https://seedkeeper.kr/">
+            <SeedkeeperIcon />
+          </a>
         </div>
         <div className={styles['footer-sponsor-section__sns']}>
-          <a href="https://www.naver.com/">
+          <a href="https://www.instagram.com/2024_ide_graduation?igsh=MW9lemdpYnRhZDhxYg==&utm_source=qr">
             <InstagramIcon />
           </a>
-          <a href="https://www.naver.com/">
+          <a href="https://www.youtube.com/@IDE_graduation">
             <YoutubeIcon />
           </a>
         </div>
