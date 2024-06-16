@@ -71,9 +71,12 @@ export default function MobileHeader() {
               <div className={styles.item__link}>학과 소개</div>
             </div>
           </div>
-          <Link className={styles.item} to="/project">
+          {/* <Link className={styles.item} to="/project">
             PROJECT
-          </Link>
+          </Link> */}
+          <div className={styles.item} onClick={() => alert('준비중입니다.')}>
+            PROJECT
+          </div>
           <Link className={styles.item} to="/designer">
             DESIGNER
           </Link>
