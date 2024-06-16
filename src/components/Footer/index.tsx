@@ -56,28 +56,48 @@ export default function Footer() {
       </div>
       <div className={styles['footer-sponsor-section']}>
         <div className={styles['footer-sponsor-section__icon']}>
-          <a href="https://www.koreatech.ac.kr/kor/">
+          <a
+            href="https://www.koreatech.ac.kr/kor/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <KoreatechIcon />
           </a>
-          <a href="https://www.koreatech.ac.kr/ide/">
+          <a
+            href="https://www.koreatech.ac.kr/ide/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <IdeIcon />
           </a>
-          <a href="https://lincthree.nrf.re.kr/#/">
+          <a
+            href="https://lincthree.nrf.re.kr/#/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <LincIcon />
           </a>
-          <a href="https://www.dscu.ac.kr/">
+          <a href="https://www.dscu.ac.kr/" rel="noreferrer" target="_blank">
             <DscIcon />
           </a>
           <SmartHumanInterfaceIcon />
-          <a href="https://seedkeeper.kr/">
+          <a href="https://seedkeeper.kr/" rel="noreferrer" target="_blank">
             <SeedkeeperIcon />
           </a>
         </div>
         <div className={styles['footer-sponsor-section__sns']}>
-          <a href="https://www.instagram.com/2024_ide_graduation?igsh=MW9lemdpYnRhZDhxYg==&utm_source=qr">
+          <a
+            href="https://www.instagram.com/2024_ide_graduation?igsh=MW9lemdpYnRhZDhxYg==&utm_source=qr"
+            rel="noreferrer"
+            target="_blank"
+          >
             <InstagramIcon />
           </a>
-          <a href="https://www.youtube.com/@IDE_graduation">
+          <a
+            href="https://www.youtube.com/@IDE_graduation"
+            rel="noreferrer"
+            target="_blank"
+          >
             <YoutubeIcon />
           </a>
         </div>
