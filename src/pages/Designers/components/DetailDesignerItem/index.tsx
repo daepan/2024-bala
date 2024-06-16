@@ -4,7 +4,7 @@ import styles from './DetailDesignerItem.module.scss';
 const SAMPLE_DATA = {
   id: 1,
   ENGName: 'Kim Chaeeun',
-  Name: '김채은',
+  Name: '김채은'
 };
 
 function DetaildesignerItem() {

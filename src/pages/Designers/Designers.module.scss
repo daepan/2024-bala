@@ -30,7 +30,7 @@
 .item-container {
   display: flex;
   justify-content: center;
-  padding: 68px 0px 0px 0px;
+  padding: 68px 0px 112px 0px;
 
   @include media.media-breakpoint(mobile) {
     display: flex;
