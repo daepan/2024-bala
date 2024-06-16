@@ -1,4 +1,4 @@
-@use "src/utils/scss/media";
+@use 'src/utils/scss/media';
 
 .section {
   width: 100%;
@@ -34,9 +34,10 @@
   left: 201px;
   display: flex;
   flex-direction: column;
+  z-index: 102;
 
   &__intro {
-    color: #636FB4;
+    color: #636fb4;
     font-family: Pretendard;
     font-size: 28px;
     font-style: normal;
@@ -47,7 +48,7 @@
   }
 
   &__title {
-    color: #4D4D4D;
+    color: #4d4d4d;
     font-family: Pretendard;
     font-size: 40px;
     font-style: normal;
@@ -58,7 +59,7 @@
   }
 
   &__content {
-    color: #4D4D4D;
+    color: #4d4d4d;
     font-family: Pretendard;
     font-size: 22px;
     font-style: normal;
