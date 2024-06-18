@@ -45,6 +45,7 @@
     width: 444px;
     height: 562px;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
     object-fit: cover;
@@ -52,6 +53,7 @@
     @include media.media-breakpoint(mobile) {
       width: 100%;
       height: 492px;
+      border-radius: 0;
       flex-direction: column;
       background-color: #222;
       position: relative;

@@ -24,10 +24,7 @@ function DetaildesignerItem({
   return (
     <Link
       className={styles['designer-button']}
-      to={`/designer/id=${student_number}`}
-      state={{
-        id: student_number
-      }}
+      to={`/designer/${student_number}`}
     >
       <div className={styles['container']}>
         <img

@@ -2,17 +2,19 @@ import { ReactComponent as LinkLogo } from './Assets/link_logo.svg';
 import { ReactComponent as InstaLogo } from './Assets/insta_logo.svg';
 import { ReactComponent as MessageLogo } from './Assets/message_logo.svg';
 import { ReactComponent as Plant } from './Assets/plant.svg';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import findProfilesByStudentNumber from 'utils/ts/findProfilesByStudentNumber';
 import styles from './DetailDesigner.module.scss';
 import TopButton from 'components/TopButton';
+import useScrollToTop from 'utils/hooks/useScrollToTop';
 import useMediaQuery from 'utils/hooks/useMediaQuery';
 
 function DetailDesigner() {
+  useScrollToTop();
   const isMobile = useMediaQuery();
-  const { state } = useLocation();
+  const params = useParams();
   const userData = findProfilesByStudentNumber(
-    state.id ? Number(state.id) : 2021151016
+    params.id ? Number(params.id) : 2021151016
   );
   return (
     <div className={styles.template}>
