@@ -43,6 +43,7 @@
   border-radius: 8px;
   background: var(--Primary-10, #f5f8ff);
   border: none;
+  cursor: pointer;
 
   @include media.media-breakpoint(mobile) {
     border-radius: 0px;

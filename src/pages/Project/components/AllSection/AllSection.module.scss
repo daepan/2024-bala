@@ -3,7 +3,7 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: 68px 0px 0px 0px;
+  padding: 68px 0px 112px 0px;
   overflow: auto;
 
   @include media.media-breakpoint(mobile) {

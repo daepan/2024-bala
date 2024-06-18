@@ -1,12 +1,11 @@
 import styles from './ExhibitIntroduce.module.scss';
 import useMediaQuery from 'utils/hooks/useMediaQuery';
-import balaPoster from './Asset/bala-poster.png';
+import balaPoster from './Asset/bala-poster.jpg';
 import exhibitMap from './Asset/exhibitionMap.png';
 import mobility from './Asset/mobility.png';
 import care from './Asset/care.png';
 import living from './Asset/living.png';
 import { ReactComponent as ToTheTopIcon } from 'Asset/to-the-top.svg';
-
 import { ReactComponent as KoreatechIcon } from 'Asset/koreatech.svg';
 import { ReactComponent as DscIcon } from 'Asset/dsc.svg';
 import { ReactComponent as IdeIcon } from 'Asset/ide.svg';
@@ -18,33 +17,34 @@ import TopButton from 'components/TopButton';
 const MEMBERS = [
   {
     group: '위원단장',
-    member: '강호정 황민성',
+    member: '강호정 황민성'
   },
   {
     group: '기획부',
-    member: '김이연 오기석 사공도영 이서하 정해민 조용현 천세강',
+    member: '김이연 오기석 사공도영 이서하 정해민 조용현 천세강'
   },
   {
     group: '진행부 ',
-    member: '박채연 김도훈 박정빈 박지윤 신민우 윤채원 이예빈',
+    member: '박채연 김도훈 박정빈 박지윤 신민우 윤채원 이예빈'
   },
   {
     group: '총무부',
-    member: '김두언 김수현 이시온',
+    member: '김두언 김수현 이시온'
   },
   {
     group: '편집부',
-    member: '김지민 곽우령 김승규 김익현 백승선 신동찬 이수빈 이한 최성우',
+    member: '김지민 곽우령 김승규 김익현 백승선 신동찬 이수빈 이한 최성우'
   },
   {
     group: '홍보부',
-    member: '김다준 김혜민 이승은 최혁수',
+    member: '김다준 김혜민 이승은 최혁수'
   },
   {
     group: '도록부',
-    member: '김채은 김정연 김호빈 원윤섭 최민경 최성일',
-  },
+    member: '김채은 김정연 김호빈 원윤섭 최민경 최성일'
+  }
 ];
+
 function ExhibitIntroduce() {
   const isMobile = useMediaQuery();
 
@@ -181,7 +181,7 @@ function ExhibitIntroduce() {
           <div className={styles['committee-section']}>
             <div className={styles['title']}>졸업준비위원회</div>
             <div className={styles['committee-section__member-section']}>
-              {MEMBERS.map((item) => (
+              {MEMBERS.map(item => (
                 <div
                   className={styles['committee-section__member']}
                   key={item.group}

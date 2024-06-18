@@ -1,12 +1,12 @@
 import styles from './MajorIntroduce.module.scss';
 import useMediaQuery from 'utils/hooks/useMediaQuery';
-import Kimsungjun from './Asset/Kimsungjun.png';
-import Hongjuphyo from './Asset/Hongjuphyo.png';
-import Jeonggwangtae from './Asset/Jeonggwangtae.png';
-import Jungjuyoung from './Asset/Jungjuyoung.png';
-import Kimtaegyun from './Asset/Kimtaegyun.png';
-import Yoonjeongsik from './Asset/Yoonjeongsik.png';
-import Yoonjinpil from './Asset/Yoonjinpil.png';
+import Kimsungjun from './Asset/김성준 교수님.png';
+import Hongjuphyo from './Asset/홍주표 교수님.png';
+import Jeonggwangtae from './Asset/정광태 교수님.png';
+import Jungjuyoung from './Asset/정주영 교수님.png';
+import Kimtaegyun from './Asset/김태균 교수님.png';
+import Yoonjeongsik from './Asset/윤정식 교수님.png';
+import Yoonjinpil from './Asset/윤진필 연구원님.png';
 import TopButton from 'components/TopButton';
 
 const OTHER_PROFESSOR = [
@@ -16,7 +16,7 @@ const OTHER_PROFESSOR = [
   { img: Hongjuphyo, name: '홍주표 교수' },
   { img: Kimsungjun, name: '김성준 교수' },
   { img: Jungjuyoung, name: '정주영 교수' },
-  { img: Yoonjinpil, name: '윤진필 기술연구원' },
+  { img: Yoonjinpil, name: '윤진필 기술연구원' }
 ];
 
 export default function MajorIntroduce() {
@@ -30,12 +30,12 @@ export default function MajorIntroduce() {
       </div>
       <div className={styles['mobile-major-introduce-title']}>교수진 소개</div>
       <div className={styles['other-professor-section']}>
-        {OTHER_PROFESSOR.map((item) => (
+        {OTHER_PROFESSOR.map(item => (
           <div
             className={styles['other-professor-section__items']}
             key={item.name}
           >
-            <img src={item.img} alt={item.name} />
+            <img src={item.name} alt={item.name} />
             <div className={styles['other-professor-section__name']}>
               {item.name}
             </div>
@@ -69,7 +69,7 @@ export default function MajorIntroduce() {
             </div>
           </div> */}
       <div className={styles['other-professor-section']}>
-        {OTHER_PROFESSOR.map((item) => (
+        {OTHER_PROFESSOR.map(item => (
           <div
             className={styles['other-professor-section__items']}
             key={item.name}
