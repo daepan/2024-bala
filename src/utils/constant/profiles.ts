@@ -4,6 +4,8 @@ export type ProfilesDataType = {
   name_en: string;
   sentence: string;
   email: string;
+  instagram?: string;
+  photopolio_link?: string;
   plant_name: string;
   plant_category: string;
   concept: string;

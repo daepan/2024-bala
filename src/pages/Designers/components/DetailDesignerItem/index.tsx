@@ -1,4 +1,5 @@
 import useMediaQuery from 'utils/hooks/useMediaQuery';
+import { Link } from 'react-router-dom';
 import styles from './DetailDesignerItem.module.scss';
 
 const SAMPLE_DATA = {
@@ -7,34 +8,42 @@ const SAMPLE_DATA = {
   Name: '김채은'
 };
 
-function DetaildesignerItem() {
+interface DesignerItemProps {
+  student_number: number;
+  en_name: string;
+  name: string;
+}
+
+function DetaildesignerItem({
+  student_number,
+  en_name,
+  name
+}: DesignerItemProps) {
   const isMobile = useMediaQuery();
 
   return (
-    <a
+    <Link
       className={styles['designer-button']}
-      href={`designer/${SAMPLE_DATA.id}`}
+      to={`/designer/id=${student_number}`}
+      state={{
+        id: student_number
+      }}
     >
       <div className={styles['container']}>
         <img
           className={styles['designer-image']}
-          src={
-            isMobile
-              ? 'https://via.placeholder.com/158x210'
-              : 'https://via.placeholder.com/332x378'
-          }
+          src={`${process.env.PUBLIC_URL}/designers/${student_number} ${name}.png`}
+          alt="desinger-img"
         />
         <div className={styles['designer-info']}>
-          <span className={styles['designer-info__eng-name']}>
-            {SAMPLE_DATA.ENGName}
-          </span>
+          <span className={styles['designer-info__eng-name']}>{en_name}</span>
 
           <span className={styles['designer-info__designers-name']}>
-            {SAMPLE_DATA.Name}
+            {name}
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

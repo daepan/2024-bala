@@ -27,9 +27,9 @@
     width: 444px;
     height: 562px;
     display: flex;
-    border: 1px solid #ccc;
     justify-content: center;
     align-items: center;
+    object-fit: cover;
 
     @include media.media-breakpoint(mobile) {
       width: 100%;
@@ -40,6 +40,22 @@
     }
   }
 
+  &__img {
+    width: 444px;
+    height: 562px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+
+    @include media.media-breakpoint(mobile) {
+      width: 100%;
+      height: 492px;
+      flex-direction: column;
+      background-color: #222;
+      position: relative;
+    }
+  }
   &__info {
     width: 564px;
     margin-left: 132px;
@@ -208,6 +224,12 @@
     display: flex;
     align-items: center;
     margin-bottom: 8.5px;
+  }
+
+  &__link {
+    text-decoration: none;
+    border: none;
+    color: #222;
   }
 
   &__logo {
