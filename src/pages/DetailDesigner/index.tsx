@@ -1,6 +1,7 @@
 import { ReactComponent as LinkLogo } from './Assets/link_logo.svg';
 import { ReactComponent as InstaLogo } from './Assets/insta_logo.svg';
 import { ReactComponent as MessageLogo } from './Assets/message_logo.svg';
+import { ReactComponent as Plant } from './Assets/plant.svg';
 import { useLocation } from 'react-router-dom';
 import findProfilesByStudentNumber from 'utils/ts/findProfilesByStudentNumber';
 import styles from './DetailDesigner.module.scss';
@@ -49,12 +50,15 @@ function DetailDesigner() {
             <div className={styles.links__item}>
               <MessageLogo className={styles.links__logo} /> {userData?.email}
             </div>
-            <div className={styles.links__item}>
-              <InstaLogo className={styles.links__logo} /> {userData?.instagram}
-            </div>
-            <div className={styles.links__item}>
-              <LinkLogo className={styles.links__logo} />
-              {userData?.photopolio_link ? (
+            {userData?.instagram && (
+              <div className={styles.links__item}>
+                <InstaLogo className={styles.links__logo} />
+                {userData?.instagram}
+              </div>
+            )}
+            {userData?.photopolio_link && (
+              <div className={styles.links__item}>
+                <LinkLogo className={styles.links__logo} />
                 <a
                   className={styles.links__link}
                   href={userData?.photopolio_link}
@@ -63,10 +67,8 @@ function DetailDesigner() {
                 >
                   {userData?.photopolio_link}
                 </a>
-              ) : (
-                ''
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -123,6 +125,22 @@ function DetailDesigner() {
             </div>
             <div className={styles.card__tail}>
               <div className={styles.card__answer}>{userData?.story}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.more}>
+        <div className={styles.more__title}>작품 더보기</div>
+        <div className={styles.more__content}>
+          <div className={styles.card}>
+            <Plant className={styles.card__img} />
+            <div className={styles.card__description}>
+              <div className={styles.card__title}>
+                {userData?.plant_category} | {userData?.plant_name}
+              </div>
+              <div className={styles.card__content}>
+                내가 발아시킨 또 다른 씨앗과 화분
+              </div>
             </div>
           </div>
         </div>
