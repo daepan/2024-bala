@@ -403,6 +403,7 @@
     height: 324px;
     flex-shrink: 0;
     border-radius: 8px;
+    object-fit: cover;
 
     @include media.media-breakpoint(mobile) {
       width: 100%;
