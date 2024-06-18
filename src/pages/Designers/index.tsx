@@ -2,6 +2,7 @@ import useMediaQuery from 'utils/hooks/useMediaQuery';
 import styles from './Designers.module.scss';
 import DetailDesignerItem from './components/DetailDesignerItem';
 import TopButton from 'components/TopButton';
+import { PROFILES, ProfilesDataType } from 'utils/constant/profiles';
 
 function Designers() {
   const isMobile = useMediaQuery();
@@ -20,13 +21,14 @@ function Designers() {
       )}
       <div className={styles['item-container']}>
         <div className={styles['item-section']}>
-          <DetailDesignerItem />
-          <DetailDesignerItem />
-          <DetailDesignerItem />
-          <DetailDesignerItem />
-          <DetailDesignerItem />
-          <DetailDesignerItem />
-          <DetailDesignerItem />
+          {PROFILES.map((profile: ProfilesDataType, index: number) => (
+            <DetailDesignerItem
+              key={profile.student_number}
+              student_number={profile.student_number}
+              en_name={profile.name_en}
+              name={profile.name}
+            />
+          ))}
         </div>
       </div>
     </div>

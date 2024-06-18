@@ -1,13 +1,19 @@
 import { ReactComponent as LinkLogo } from './Assets/link_logo.svg';
 import { ReactComponent as InstaLogo } from './Assets/insta_logo.svg';
 import { ReactComponent as MessageLogo } from './Assets/message_logo.svg';
+import { ReactComponent as Plant } from './Assets/plant.svg';
+import { useLocation } from 'react-router-dom';
+import findProfilesByStudentNumber from 'utils/ts/findProfilesByStudentNumber';
 import styles from './DetailDesigner.module.scss';
 import TopButton from 'components/TopButton';
 import useMediaQuery from 'utils/hooks/useMediaQuery';
 
 function DetailDesigner() {
   const isMobile = useMediaQuery();
-
+  const { state } = useLocation();
+  const userData = findProfilesByStudentNumber(
+    state.id ? Number(state.id) : 2021151016
+  );
   return (
     <div className={styles.template}>
       {!isMobile && (
@@ -17,34 +23,52 @@ function DetailDesigner() {
       )}
       <div className={styles.profile}>
         <div className={styles.profile__image}>
-          이미지
+          <img
+            className={styles.profile__img}
+            src={`${process.env.PUBLIC_URL}/designers/${userData?.student_number} ${userData?.name}.png`}
+            alt="designer"
+          />
           <div className={styles['name--mobile']}>
-            <div className={styles['name__title--mobile']}>이름</div>
-            <div className={styles['name__en--mobile']}>영어이름</div>
+            <div className={styles['name__title--mobile']}>
+              {userData?.name}
+            </div>
+            <div className={styles['name__en--mobile']}>
+              {userData?.name_en}
+            </div>
           </div>
         </div>
         <div className={styles.profile__info}>
           <div className={styles.name}>
-            <div className={styles.name__title}>이름</div>
-            <div className={styles.name__en}>영어이름</div>
+            <div className={styles.name__title}>{userData?.name}</div>
+            <div className={styles.name__en}>{userData?.name_en}</div>
           </div>
           <div className={styles.word}>
-            <div className={styles.word__header}>김다준의 한마디</div>
-            <div className={styles.word__content}>
-              나는 자랑스러운 태극기앞에 말랑뱅구 다식이 최고 이제 졸업이다.
-            </div>
+            <div className={styles.word__header}>{userData?.name}의 한마디</div>
+            <div className={styles.word__content}>{userData?.sentence}</div>
           </div>
           <div className={styles.links}>
             <div className={styles.links__item}>
-              <MessageLogo className={styles.links__logo} />{' '}
-              autumn0205@koreatech.ac.kr
+              <MessageLogo className={styles.links__logo} /> {userData?.email}
             </div>
-            <div className={styles.links__item}>
-              <InstaLogo className={styles.links__logo} /> @the__autum.n
-            </div>
-            <div className={styles.links__item}>
-              <LinkLogo className={styles.links__logo} /> Portfolio Link
-            </div>
+            {userData?.instagram && (
+              <div className={styles.links__item}>
+                <InstaLogo className={styles.links__logo} />
+                {userData?.instagram}
+              </div>
+            )}
+            {userData?.photopolio_link && (
+              <div className={styles.links__item}>
+                <LinkLogo className={styles.links__logo} />
+                <a
+                  className={styles.links__link}
+                  href={userData?.photopolio_link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {userData?.photopolio_link}
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -59,12 +83,7 @@ function DetailDesigner() {
               </div>
             </div>
             <div className={styles.card__tail}>
-              <div className={styles.card__answer}>
-                2021년도에는 응애응애 신입생이던 제가 드디어 2024년, 졸업작품을
-                만들고 드디어 졸업을 할 줄 알았으나 사실 내년에 졸업하게 됩니다.
-                ㅋ 속았지. 아무튼 졸업 전시 합니다. 졸업 전시 많관부~승관
-                2021년도에는 응애응애 신입생이던 제가
-              </div>
+              <div className={styles.card__answer}>{userData?.concept}</div>
             </div>
           </div>
           <div className={styles.card}>
@@ -77,12 +96,7 @@ function DetailDesigner() {
               </div>
             </div>
             <div className={styles.card__tail}>
-              <div className={styles.card__answer}>
-                2021년도에는 응애응애 신입생이던 제가 드디어 2024년, 졸업작품을
-                만들고 드디어 졸업을 할 줄 알았으나 사실 내년에 졸업하게 됩니다.
-                ㅋ 속았지. 아무튼 졸업 전시 합니다. 졸업 전시 많관부~승관
-                2021년도에는 응애응애 신입생이던 제가
-              </div>
+              <div className={styles.card__answer}>{userData?.experience}</div>
             </div>
           </div>
           <div className={styles.card}>
@@ -95,12 +109,7 @@ function DetailDesigner() {
               </div>
             </div>
             <div className={styles.card__tail}>
-              <div className={styles.card__answer}>
-                2021년도에는 응애응애 신입생이던 제가 드디어 2024년, 졸업작품을
-                만들고 드디어 졸업을 할 줄 알았으나 사실 내년에 졸업하게 됩니다.
-                ㅋ 속았지. 아무튼 졸업 전시 합니다. 졸업 전시 많관부~승관
-                2021년도에는 응애응애 신입생이던 제가
-              </div>
+              <div className={styles.card__answer}>{userData?.challenge}</div>
             </div>
           </div>
           <div className={styles.card}>
@@ -115,11 +124,22 @@ function DetailDesigner() {
               </div>
             </div>
             <div className={styles.card__tail}>
-              <div className={styles.card__answer}>
-                2021년도에는 응애응애 신입생이던 제가 드디어 2024년, 졸업작품을
-                만들고 드디어 졸업을 할 줄 알았으나 사실 내년에 졸업하게 됩니다.
-                ㅋ 속았지. 아무튼 졸업 전시 합니다. 졸업 전시 많관부~승관
-                2021년도에는 응애응애 신입생이던 제가
+              <div className={styles.card__answer}>{userData?.story}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.more}>
+        <div className={styles.more__title}>작품 더보기</div>
+        <div className={styles.more__content}>
+          <div className={styles.card}>
+            <Plant className={styles.card__img} />
+            <div className={styles.card__description}>
+              <div className={styles.card__title}>
+                {userData?.plant_category} | {userData?.plant_name}
+              </div>
+              <div className={styles.card__content}>
+                내가 발아시킨 또 다른 씨앗과 화분
               </div>
             </div>
           </div>
