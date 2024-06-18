@@ -78,14 +78,15 @@ export default function Header() {
           {isMenuTab && (
             <div className={styles.generation__tab}>
               <div className={styles.generation__item}>30th - 발아</div>
-              <div
+              <a
                 className={cn({
                   [styles['generation__item']]: true,
                   [styles['generation__item--under']]: true
                 })}
+                href="http://ide-2023.com/main"
               >
                 29th - 이륙준비
-              </div>
+              </a>
             </div>
           )}
         </div>
