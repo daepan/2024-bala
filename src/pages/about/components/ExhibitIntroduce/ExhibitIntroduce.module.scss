@@ -46,6 +46,7 @@
   flex-direction: column;
   //align-items: center;
   padding: 117px 0px 0px 200px;
+
   @include media.media-breakpoint(mobile) {
     width: calc(100% - 48px);
     padding: 62px 24px 65px 24px;
@@ -211,6 +212,7 @@
   gap: 280px;
   margin-bottom: 135px;
   flex-wrap: wrap;
+
   @include media.media-breakpoint(mobile) {
     width: 100%;
     gap: 43px;
@@ -232,7 +234,7 @@
   }
 
   &__wrapper {
-    width: 100%;
+    width: 50%;
   }
 
   &__info {
@@ -447,6 +449,7 @@
   flex-wrap: wrap;
   gap: 26px;
   justify-content: center;
+
   @include media.media-breakpoint(mobile) {
     margin-top: 0px;
     gap: 15px;
