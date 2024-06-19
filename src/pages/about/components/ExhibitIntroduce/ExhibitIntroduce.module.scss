@@ -3,7 +3,7 @@
 .container {
   position: relative;
   margin: 0 auto;
-  max-width: 1920px;
+  width: 100vw;
 
   @include media.media-breakpoint(mobile) {
     padding-top: 51px;
@@ -44,6 +44,7 @@
 .exhibit-introduce-section {
   display: flex;
   flex-direction: column;
+  width: calc(100% - 200px);
   //align-items: center;
   padding: 117px 0px 0px 200px;
 
@@ -209,7 +210,6 @@
 
 .exhibit-section {
   display: flex;
-  gap: 280px;
   margin-bottom: 135px;
   flex-wrap: wrap;
 
@@ -235,11 +235,16 @@
 
   &__wrapper {
     width: 50%;
+
+    @include media.media-breakpoint(mobile) {
+      width: 100%;
+    }
   }
 
   &__info {
     margin-top: 14px;
     width: 100%;
+    max-width: 486px;
     color: #000;
 
     /* Medium/20pt */
