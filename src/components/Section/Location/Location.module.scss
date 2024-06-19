@@ -2,7 +2,7 @@
 
 .section {
   width: 100vw;
-  height: 993px;
+  height: calc(100vh - 78px);
   background-image: url('Asset/BG.png');
   background-size: contain;
   background-position: center center;
