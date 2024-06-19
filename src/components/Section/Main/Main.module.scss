@@ -1,8 +1,9 @@
 @use 'src/utils/scss/media';
 
 .section {
-  width: 100%;
-  height: calc(100vh - 100px);
+  width: 80vw;
+  padding: 0 10vw;
+  height: calc(100vh - 78px);
   position: relative;
   background-image: url('Asset/BG.png');
   background-size: contain;
@@ -12,8 +13,13 @@
 
   &__image {
     position: absolute;
-    right: 138.31px;
+    right: 60px;
     bottom: 223px;
+  
+    &--seed {
+      width: 47vw;
+      height: 90vh;
+    }
   }
 
   &__arrow {
@@ -21,7 +27,7 @@
     height: 42px;
     width: 20px;
     bottom: 81px;
-    right: 263px;
+    right: 100px;
     z-index: 99;
     cursor: pointer;
   }
@@ -31,7 +37,6 @@
   position: absolute;
   width: 447px;
   bottom: 117px;
-  left: 201px;
   display: flex;
   flex-direction: column;
   z-index: 102;

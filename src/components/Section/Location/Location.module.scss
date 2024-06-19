@@ -1,7 +1,8 @@
 @use "src/utils/scss/media";
 
 .section {
-  width: 100vw;
+  width: 80vw;
+  padding: 0 10vw;
   height: calc(100vh - 78px);
   background-image: url('Asset/BG.png');
   background-size: contain;
@@ -21,8 +22,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    width: calc(100vw - 400px);
-    padding: 0 200px;
+    width: 100%;
 
     @include media.media-breakpoint(mobile) {
       flex-direction: column;

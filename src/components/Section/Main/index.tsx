@@ -41,7 +41,7 @@ export default function MainSection({
         </div>
       </div>
       <motion.div className={styles.section__image} style={{ y }}>
-        <BlueSeed />
+        <BlueSeed className={styles['section__image--seed']} />
       </motion.div>
       <Arrow className={styles.section__arrow} onClick={() => onMoveScroll()}/>
     </div>
