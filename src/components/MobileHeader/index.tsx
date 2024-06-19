@@ -77,7 +77,7 @@ export default function MobileHeader() {
           <div className={styles.item} onClick={() => alert('준비중입니다.')}>
             PROJECT
           </div>
-          <Link className={styles.item} to="/designer">
+          <Link className={styles.item} to="/designers">
             DESIGNER
           </Link>
           <a className={styles.item} href="http://ide-2023.com/main">

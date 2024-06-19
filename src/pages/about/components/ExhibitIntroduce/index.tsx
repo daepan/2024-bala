@@ -5,6 +5,7 @@ import exhibitMap from './Asset/exhibitionMap.png';
 import mobility from './Asset/mobility.png';
 import care from './Asset/care.png';
 import living from './Asset/living.png';
+import cn from 'utils/ts/classnames';
 import { ReactComponent as ToTheTopIcon } from 'Asset/to-the-top.svg';
 import { ReactComponent as KoreatechIcon } from 'Asset/koreatech.svg';
 import { ReactComponent as DscIcon } from 'Asset/dsc.svg';
@@ -159,21 +160,41 @@ function ExhibitIntroduce() {
                     Living
                   </li>
                 </ul>
-                <ul className={styles['exhibit-section__detail-title-number']}>
+                <ol className={styles['exhibit-section__detail-title-number']}>
                   <span>Contents</span>
-                  <li className={styles['exhibit-section__detail-info']}>
+                  <li
+                    className={cn({
+                      [styles['exhibit-section__detail-info']]: true,
+                      [styles['exhibit-section__detail-info--number']]: true
+                    })}
+                  >
                     Introduction
                   </li>
-                  <li className={styles['exhibit-section__detail-info']}>
+                  <li
+                    className={cn({
+                      [styles['exhibit-section__detail-info']]: true,
+                      [styles['exhibit-section__detail-info--number']]: true
+                    })}
+                  >
                     Media
                   </li>
-                  <li className={styles['exhibit-section__detail-info']}>
+                  <li
+                    className={cn({
+                      [styles['exhibit-section__detail-info']]: true,
+                      [styles['exhibit-section__detail-info--number']]: true
+                    })}
+                  >
                     Interview
                   </li>
-                  <li className={styles['exhibit-section__detail-info']}>
+                  <li
+                    className={cn({
+                      [styles['exhibit-section__detail-info']]: true,
+                      [styles['exhibit-section__detail-info--number']]: true
+                    })}
+                  >
                     Project
                   </li>
-                </ul>
+                </ol>
               </div>
             </div>
             <img src={exhibitMap} alt="exhibitMap" />

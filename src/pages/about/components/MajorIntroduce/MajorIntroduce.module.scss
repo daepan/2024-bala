@@ -200,11 +200,29 @@
 .mobile-major-introduce-section {
   display: flex;
   flex-direction: column;
-  padding: 40px 24px 153px 24px;
+  padding: 90px 24px 153px 24px;
 }
 
 .mobile-major-introduce {
   max-height: 300px;
+  margin-bottom: 30px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+
+.mobile-major-introduce-sub {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 32px */
+  letter-spacing: -0.22px;
+  margin-top: 30px;
 }
 
 .mobile-major-introduce-title {
