@@ -6,7 +6,6 @@
   max-width: 1920px;
 
   @include media.media-breakpoint(mobile) {
-    min-width: 375px;
     padding-top: 51px;
     // & > img {
     //   display: flex;
@@ -29,7 +28,7 @@
   // width: 375px;
   // height: 530px;
 
-  max-width: 375px;
+  width: 100%;
   max-height: 530px;
   height: auto;
 
@@ -48,9 +47,11 @@
   //align-items: center;
   padding: 117px 0px 0px 200px;
   @include media.media-breakpoint(mobile) {
-    padding: 62px 23px 65px 26px;
+    width: calc(100% - 48px);
+    padding: 62px 24px 65px 24px;
   }
 }
+
 .title {
   color: #6170b5;
   width: fit-content;
@@ -211,9 +212,11 @@
   margin-bottom: 135px;
   flex-wrap: wrap;
   @include media.media-breakpoint(mobile) {
+    width: 100%;
     gap: 43px;
     margin-bottom: 74px;
   }
+
   & > img {
     //max-width: 568px;
     max-height: 449px;
@@ -228,9 +231,13 @@
     }
   }
 
+  &__wrapper {
+    width: 100%;
+  }
+
   &__info {
     margin-top: 14px;
-    width: fit-content;
+    width: 100%;
     color: #000;
 
     /* Medium/20pt */
@@ -254,6 +261,11 @@
   &__detail {
     display: flex;
     margin-top: 53px;
+
+    @include media.media-breakpoint(mobile) {
+      margin-top: 28px;
+      width: 100%;
+    }
   }
 
   &__detail-title {
@@ -262,6 +274,11 @@
     justify-content: space-between;
     height: 125px;
     margin-right: 77px;
+
+    @include media.media-breakpoint(mobile) {
+      width: 50%;
+      margin-right: 0;
+    }
 
     & > span {
       color: #000;
@@ -276,7 +293,7 @@
 
       @include media.media-breakpoint(mobile) {
         color: #000;
-
+        margin-bottom: 18px;
         /* Bold/14pt */
         font-family: Pretendard;
         font-size: 14px;
@@ -293,6 +310,9 @@
     justify-content: space-between;
     padding: 0;
 
+    @include media.media-breakpoint(mobile) {
+      width: 50%;
+    }
     & > span {
       color: #000;
       display: block;
@@ -305,7 +325,7 @@
       line-height: 160%; /* 32px */
       @include media.media-breakpoint(mobile) {
         color: #000;
-
+        margin-bottom: 18px;
         /* Bold/14pt */
         font-family: Pretendard;
         font-size: 14px;
@@ -328,14 +348,10 @@
     margin-bottom: 10px;
     margin-left: 20px;
 
-    &--number {
-      height: 25px;
-      margin-bottom: 17px;
-    }
-
     @include media.media-breakpoint(mobile) {
       color: #000;
-
+      height: 16px;
+      margin-bottom: 9px;
       /* Regular/14pt */
       font-family: Pretendard;
       font-size: 14px;
@@ -343,12 +359,23 @@
       font-weight: 400;
       line-height: 160%; /* 22.4px */
     }
+
+    &--number {
+      height: 25px;
+      margin-bottom: 17px;
+
+      @include media.media-breakpoint(mobile) {
+        height: 16px;
+        margin-bottom: 9px;
+      }
+    }
   }
 }
 
 .committee-section {
   &__member-section {
     margin-top: 20px;
+
     @include media.media-breakpoint(mobile) {
       margin-top: 23px;
       display: flex;
@@ -361,6 +388,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 9px;
+
+    @include media.media-breakpoint(mobile) {
+      margin-bottom: 0;
+    }
   }
 
   &__member-group {
@@ -374,8 +405,10 @@
     font-weight: 700;
     line-height: 160%; /* 35.2px */
     letter-spacing: -0.242px;
+
     @include media.media-breakpoint(mobile) {
-      width: 68px;
+      width: 42px;
+      margin-right: 26px;
       color: #000;
       font-family: Pretendard;
       font-size: 12px;
@@ -386,7 +419,7 @@
   }
 
   &__member-group-unit {
-    color: var(--4D, #4d4d4d);
+    color: #4d4d4d;
     /* Medium/22pt */
     font-family: Pretendard;
     font-size: 22px;
@@ -398,6 +431,7 @@
     @include media.media-breakpoint(mobile) {
       color: #000;
       font-family: Pretendard;
+      max-width: 75%;
       font-size: 12px;
       font-style: normal;
       font-weight: 300;

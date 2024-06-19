@@ -2,12 +2,6 @@ import useMediaQuery from 'utils/hooks/useMediaQuery';
 import { Link } from 'react-router-dom';
 import styles from './DetailDesignerItem.module.scss';
 
-const SAMPLE_DATA = {
-  id: 1,
-  ENGName: 'Kim Chaeeun',
-  Name: '김채은'
-};
-
 interface DesignerItemProps {
   student_number: number;
   en_name: string;

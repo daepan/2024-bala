@@ -6,7 +6,7 @@ import useMediaQuery from 'utils/hooks/useMediaQuery';
 import styles from './about.module.scss';
 import useScrollNav from 'utils/hooks/useScrollNav';
 
-const TAB_LIST = ['전시 소개', '학과 소개'];
+export const TAB_LIST = ['전시 소개', '학과 소개'];
 
 export default function About() {
   const { tabs, currentTab } = DetailTabs.useTabs(TAB_LIST);

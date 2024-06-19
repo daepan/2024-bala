@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import cn from 'utils/ts/classnames';
+import { createSearchParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as MobileLogo } from 'assets/bala_logo_mobile.svg';
 import { ReactComponent as MobileMenu } from 'assets/main_menu_mobile.svg';
 import { ReactComponent as XIcon } from 'assets/close.svg';
+import { TAB_LIST } from 'pages/about';
 import styles from './MobileHeader.module.scss';
 
 export default function MobileHeader() {
@@ -18,6 +19,23 @@ export default function MobileHeader() {
   const onClickAboutToggle = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     setAboutToggle(current => !current);
+  };
+
+  const onClickTab = (e: React.MouseEvent<HTMLDivElement>, tab: string) => {
+    e.preventDefault();
+    setMenuToggle(false);
+    navigate({
+      pathname: '/about',
+      search: createSearchParams({
+        tab
+      }).toString()
+    });
+  };
+
+  const onClickDesigner = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setMenuToggle(false);
+    navigate('/designers');
   };
 
   return (
@@ -67,8 +85,15 @@ export default function MobileHeader() {
                 [styles['item__list--on']]: aboutToggle
               })}
             >
-              <div className={styles.item__link}>전시 소개</div>
-              <div className={styles.item__link}>학과 소개</div>
+              {TAB_LIST.map(tab => (
+                <div
+                  className={styles.item__link}
+                  key={tab}
+                  onClick={e => onClickTab(e, tab)}
+                >
+                  {tab}
+                </div>
+              ))}
             </div>
           </div>
           {/* <Link className={styles.item} to="/project">
@@ -77,9 +102,9 @@ export default function MobileHeader() {
           <div className={styles.item} onClick={() => alert('준비중입니다.')}>
             PROJECT
           </div>
-          <Link className={styles.item} to="/designers">
+          <div className={styles.item} onClick={e => onClickDesigner(e)}>
             DESIGNER
-          </Link>
+          </div>
           <a className={styles.item} href="http://ide-2023.com/main">
             29th
           </a>

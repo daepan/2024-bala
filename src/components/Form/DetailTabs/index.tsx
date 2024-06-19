@@ -16,7 +16,7 @@ function DetailTabs({ tabs, selected, projectType, showNav }: DetailTabsProps) {
       className={cn({
         [styles['project-tab-button-section']]: projectType === true,
         [styles['tab-button-section']]: projectType === undefined,
-        [styles['tab-button-section--hide']]: showNav === false,
+        [styles['tab-button-section--hide']]: showNav === false
         // [styles['hide-nav']]: showNav === false,
       })}
     >
@@ -28,7 +28,7 @@ function DetailTabs({ tabs, selected, projectType, showNav }: DetailTabsProps) {
             [styles['project-tab-button--unchecked']]:
               selected !== tab.name && projectType === true,
             [styles['tab-button']]: selected === tab.name,
-            [styles['tab-button--unchecked']]: selected !== tab.name,
+            [styles['tab-button--unchecked']]: selected !== tab.name
           })}
           key={tab.name}
           onClick={tab.onClick}
@@ -41,17 +41,17 @@ function DetailTabs({ tabs, selected, projectType, showNav }: DetailTabsProps) {
   );
 }
 
-function useTabs(tabList: string[]) {
+export function useTabs(tabList: string[]) {
   const [currentTab, setCurrentTab] = useState(tabList[0]);
   const [searchParams, setSearchParams] = useSearchParams();
   const previousTab = searchParams.get('tab');
 
-  const tabs = tabList.map((tab) => ({
+  const tabs = tabList.map(tab => ({
     name: tab,
     onClick: () => {
       setCurrentTab(tab);
       setSearchParams({ tab: `${tab}` });
-    }, //클릭된 탭의 이름을 currentTab에 저장
+    } //클릭된 탭의 이름을 currentTab에 저장
   }));
 
   useEffect(() => {

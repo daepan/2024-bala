@@ -168,8 +168,8 @@
     }
 
     & > img {
-      width: 179px;
-      height: 239px;
+      width: 224px;
+      height: 299px;
 
       @include media.media-breakpoint(mobile) {
         width: 95.36px;
@@ -179,7 +179,7 @@
   }
 
   &__name {
-    color: var(--, #000);
+    color: #000;
     font-family: Pretendard;
     font-size: 18px;
     font-style: normal;

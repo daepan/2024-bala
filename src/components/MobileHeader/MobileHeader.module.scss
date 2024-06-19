@@ -1,4 +1,4 @@
-@use "src/utils/scss/media";
+@use 'src/utils/scss/media';
 
 .header {
   width: calc(100vw - 24px);
@@ -8,22 +8,22 @@
   position: absolute;
   justify-content: space-between;
   font-family: Pretendard;
-  background-color: #FFF;
+  background-color: #fff;
   display: flex;
   align-items: center;
   z-index: 1200;
 
   @include media.media-breakpoint(mobile) {
-    background-color: #FFF; 
+    background-color: #fff;
     height: 64px;
     width: calc(100vw - 24px);
     align-items: center;
     position: fixed;
-    top: 0; 
+    top: 0;
     left: 0;
     right: 0;
     flex-direction: column;
-  
+
     &--on {
       background-color: rgba(8, 6, 6, 0.6);
       width: 100vw;
@@ -42,26 +42,26 @@
     display: flex;
     align-items: center;
     padding: 28.4px 14px 17px;
-    background-color: #FFF;
+    background-color: #fff;
     z-index: 999;
     cursor: pointer;
-  
+
     @include media.media-breakpoint(mobile) {
       width: calc(100% - 48px);
       display: flex;
       padding: 17px 14px;
       justify-content: space-between;
-    
+
       &--on {
         width: calc(100vw - 48px);
         animation: openToggle 0.4s linear;
         -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
         animation-timing-function: linear;
-        background-color: #FFF;
+        background-color: #fff;
         padding: 8px 24px 12px;
         float: right;
         justify-content: flex-end;
-      } 
+      }
     }
   }
 
@@ -89,7 +89,7 @@
     height: 3px;
     width: 100%;
     border-radius: 10px;
-    background: #646AB0;
+    background: #646ab0;
     transform-origin: 0% 0%;
     transition: transform 0.4s ease-in-out;
 
@@ -102,9 +102,9 @@
     height: 3px;
     width: 100%;
     border-radius: 10px;
-    background: #646AB0;
+    background: #646ab0;
     transition: transform 0.2s ease-in-out;
-  
+
     &--on {
       transform: scaleY(0);
     }
@@ -115,7 +115,7 @@
     height: 3px;
     width: 100%;
     border-radius: 10px;
-    background: #646AB0;
+    background: #646ab0;
     transform-origin: 0% 100%;
     transition: transform 0.4s ease-in-out;
 
@@ -145,7 +145,7 @@
     padding: 122px;
     margin-top: -1px;
     display: flex;
-    background-color: #FFF;
+    background-color: #fff;
     opacity: 1;
   }
 
@@ -167,7 +167,7 @@
 .item {
   height: 34.667px;
   flex-shrink: 0;
-  color: #6170B5;
+  color: #6170b5;
   font-family: Pretendard;
   font-size: 30px;
   font-style: normal;
@@ -191,7 +191,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
-  
+
     &--on {
       display: flex;
       max-height: 50px;
@@ -203,12 +203,13 @@
   }
 
   &__link {
-    color: #6170B5;
+    color: #6170b5;
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     letter-spacing: 0.07px;
+    margin-bottom: 8px;
   }
 }
 

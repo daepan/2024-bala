@@ -141,11 +141,11 @@ function ExhibitIntroduce() {
             </div>
           </div>
           <div className={styles['exhibit-section']}>
-            <div>
+            <div className={styles['exhibit-section__wrapper']}>
               <div className={styles['title']}>전시 안내도</div>
               <div className={styles['exhibit-section__info']}>
-                각 전시자들의 작품이 전시되어 있는 Exhibition Zone과 <br />
-                전시 컨텐츠를 즐길 수 있는 Contents Zone이 있습니다.
+                각 전시자들의 작품이 전시되어 있는 Exhibition Zone과 전시
+                컨텐츠를 즐길 수 있는 Contents Zone이 있습니다.
               </div>
               <div className={styles['exhibit-section__detail']}>
                 <ul className={styles['exhibit-section__detail-title']}>
