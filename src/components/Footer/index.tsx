@@ -22,10 +22,18 @@ export default function Footer() {
           발아 : 도약의 순간
         </div>
         <div className={styles['mobile-footer-section__snsSection']}>
-          <a href="https://www.naver.com/">
+          <a
+            href="https://www.instagram.com/2024_ide_graduation?igsh=MW9lemdpYnRhZDhxYg==&utm_source=qr"
+            rel="noreferrer"
+            target="_blank"
+           >
             <InstagramIcon />
           </a>
-          <a href="https://www.naver.com/">
+          <a
+            href="https://www.youtube.com/@IDE_graduation"
+            rel="noreferrer"
+            target="_blank"
+          >
             <YoutubeIcon />
           </a>
         </div>
