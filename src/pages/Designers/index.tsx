@@ -4,6 +4,15 @@ import DetailDesignerItem from './components/DetailDesignerItem';
 import TopButton from 'components/TopButton';
 import { PROFILES, ProfilesDataType } from 'utils/constant/profiles';
 
+function shuffleArray(array: ProfilesDataType[]): ProfilesDataType[] {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+
 function Designers() {
   const isMobile = useMediaQuery();
 
@@ -21,7 +30,7 @@ function Designers() {
       )}
       <div className={styles['item-container']}>
         <div className={styles['item-section']}>
-          {PROFILES.map((profile: ProfilesDataType, index: number) => (
+          {shuffleArray(PROFILES).map((profile: ProfilesDataType, index: number) => (
             <DetailDesignerItem
               key={profile.student_number}
               student_number={profile.student_number}

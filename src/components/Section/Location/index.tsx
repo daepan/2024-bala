@@ -4,8 +4,13 @@ import { ReactComponent as TimeLogo } from './Asset/time_logo.svg';
 import { ReactComponent as Map } from './Asset/map.svg';
 import styles from './Location.module.scss';
 
+const MAP_LINK = "https://www.google.com/maps/place/%EB%85%B8%EB%93%A4%EA%B0%A4%EB%9F%AC%EB%A6%AC+1%EA%B4%80/data=!3m1!4b1!4m6!3m5!1s0x357ca1bcc95d37a3:0xabc9c03554d23238!8m2!3d37.517817!4d126.9576895!16s%2Fg%2F11r4h0118m?entry=ttu";
+
 export default function LocationSection() {
   const isMobile = useMediaQuery();
+  const onClickMap = () => {
+    window.location.href = MAP_LINK;
+  }
   return (
     <div className={styles.section}>
       <div className={styles.section__content}>
@@ -44,7 +49,7 @@ export default function LocationSection() {
             </div>
           </div>
         </div>
-        <Map className={styles.section__map}/>
+        <Map className={styles.section__map} onClick={() => onClickMap()}/>
       </div>
     </div>
   )
