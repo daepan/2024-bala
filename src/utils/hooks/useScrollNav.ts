@@ -10,6 +10,9 @@ function useScrollNav() {
 
       if (currentScrollY > lastScrollY) {
         setShowNav(false);
+      }
+      else if(currentScrollY === 0){
+        setShowNav(true); // 최상단일 때는 nav바를 항상 보여줌
       } else {
         setShowNav(true);
       }

@@ -33,7 +33,7 @@ export default function MajorIntroduce() {
         산업디자인 기술과 공학적 지식을 활용하여 사용자의 감성과 경험을 충족하는
         스마트제품 및 감성융합서비스 디자인 전문가 양성을 목표로 하고 있다.
         급변하는 현대 산업사회에서 능동적으로 디자인 문제를 발견하고, 창의적인
-        디자인 솔루션을 제시할 수 있는 디자인 전문인력 양성에 중점을 두고 있다
+        디자인 솔루션을 제시할 수 있는 디자인 전문인력 양성에 중점을 두고 있다.
       </div>
       <div className={styles['mobile-major-introduce-title']}>교수진 소개</div>
       <div className={styles['other-professor-section']}>

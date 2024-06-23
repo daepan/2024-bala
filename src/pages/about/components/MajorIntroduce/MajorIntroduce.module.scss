@@ -170,10 +170,11 @@
     & > img {
       width: 224px;
       height: 299px;
-
+      border-radius: 8px;
       @include media.media-breakpoint(mobile) {
         width: 95.36px;
         height: 133.061px;
+        border-radius: 8px;
       }
     }
   }
