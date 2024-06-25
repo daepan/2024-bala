@@ -278,15 +278,19 @@
   &__detail-title {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     height: 125px;
-    margin-right: 77px;
+    margin-right: 77px;     
+    padding-left: 10px;
+
 
     @include media.media-breakpoint(mobile) {
       width: 50%;
       margin-right: 0;
+      padding-left: 10px;
+      
     }
-
+    
     & > span {
       color: #000;
       /* Medium/20pt */
@@ -323,7 +327,7 @@
     & > span {
       color: #000;
       display: block;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       /* Medium/20pt */
       font-family: Pretendard;
       font-size: 24px;
@@ -380,6 +384,9 @@
 }
 
 .committee-section {
+      @include media.media-breakpoint(mobile) {
+        width: 375px;
+      }
   &__member-section {
     margin-top: 20px;
 
@@ -398,6 +405,7 @@
 
     @include media.media-breakpoint(mobile) {
       margin-bottom: 0;
+      align-items: flex-start;
     }
   }
 
@@ -426,6 +434,8 @@
   }
 
   &__member-group-unit {
+    display: flex;
+    gap:5px;
     color: #4d4d4d;
     /* Medium/22pt */
     font-family: Pretendard;
@@ -436,9 +446,14 @@
     letter-spacing: -0.242px;
 
     @include media.media-breakpoint(mobile) {
+      display: flex;
+      flex-wrap: wrap;
+    
       color: #000;
       font-family: Pretendard;
-      max-width: 75%;
+      gap:3px;
+      max-width: 245px;
+      // max-width: 75%;
       font-size: 12px;
       font-style: normal;
       font-weight: 300;

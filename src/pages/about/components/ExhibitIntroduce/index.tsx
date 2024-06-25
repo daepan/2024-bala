@@ -15,34 +15,35 @@ import { ReactComponent as SeedkeeperIcon } from 'Asset/seedkeeper.svg';
 import { ReactComponent as SmartHumanInterfaceIcon } from 'Asset/smart-human-interface.svg';
 import TopButton from 'components/TopButton';
 
+
 const MEMBERS = [
   {
     group: '위원단장',
-    member: '강호정 황민성'
+    member: ['강호정', '황민성']
   },
   {
     group: '기획부',
-    member: '김이연 오기석 사공도영 이서하 정해민 조용현 천세강'
+    member: ['김이연', '오기석', '이서하', '정해민', '조용현', '천세강', '사공도영']
   },
   {
     group: '진행부 ',
-    member: '박채연 김도훈 박정빈 박지윤 신민우 윤채원 이예빈'
+    member: ['박채연', '김도훈', '박정빈', '박지윤', '신민우', '윤채원', '이예빈']
   },
   {
     group: '총무부',
-    member: '김두언 김수현 이시온'
+    member: ['김두언', '김수현', '이시온']
   },
   {
     group: '편집부',
-    member: '김지민 곽우령 김승규 김익현 백승선 신동찬 이수빈 이한 최성우'
+    member: ['김지민', '곽우령', '김승규', '김익현', '백승선', '신동찬', '이수빈', '최성우', '이한']
   },
   {
     group: '홍보부',
-    member: '김다준 김혜민 이승은 최혁수'
+    member: ['김다준', '김혜민' ,'이승은' ,'최혁수']
   },
   {
     group: '도록부',
-    member: '김채은 김정연 김호빈 원윤섭 최민경 최성일'
+    member: ['김채은', '김정연', '김호빈', '원윤섭', '최민경', '최성일']
   }
 ];
 
@@ -128,15 +129,15 @@ function ExhibitIntroduce() {
             <div className={styles['category-section__detail']}>
               <div className={styles['category-section__detail-type']}>
                 <img src={mobility} alt="mobility" />
-                <span>Mobility</span>
+                <span>MOBILITY ZONE </span>
               </div>
               <div className={styles['category-section__detail-type']}>
                 <img src={care} alt="care" />
-                <span>Care</span>
+                <span>CARE ZONE</span>
               </div>
               <div className={styles['category-section__detail-type']}>
                 <img src={living} alt="living" />
-                <span>Living</span>
+                <span>LIVING ZONE</span>
               </div>
             </div>
           </div>
@@ -144,20 +145,20 @@ function ExhibitIntroduce() {
             <div className={styles['exhibit-section__wrapper']}>
               <div className={styles['title']}>전시 안내도</div>
               <div className={styles['exhibit-section__info']}>
-                각 전시자들의 작품이 전시되어 있는 Exhibition Zone과 전시
+                각 전시자들의 작품이 전시되어 있는 Exhibition Zone과 <br/>전시
                 컨텐츠를 즐길 수 있는 Contents Zone이 있습니다.
               </div>
               <div className={styles['exhibit-section__detail']}>
                 <ul className={styles['exhibit-section__detail-title']}>
                   <span>Exhibition</span>
                   <li className={styles['exhibit-section__detail-info']}>
-                    Mobility
+                    MOBILITY ZONE 
                   </li>
                   <li className={styles['exhibit-section__detail-info']}>
-                    Care
+                    CARE ZONE
                   </li>
                   <li className={styles['exhibit-section__detail-info']}>
-                    Living
+                    LIVING ZONE
                   </li>
                 </ul>
                 <ol className={styles['exhibit-section__detail-title-number']}>
@@ -213,7 +214,10 @@ function ExhibitIntroduce() {
                   <div
                     className={styles['committee-section__member-group-unit']}
                   >
-                    {item.member}
+                    {item.member.map((member) => (
+                      <span key={member}>{member}</span>                   
+                    ))}
+                  
                   </div>
                 </div>
               ))}
