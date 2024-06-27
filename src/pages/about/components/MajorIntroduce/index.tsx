@@ -7,7 +7,7 @@ import Jungjuyoung from './Asset/정주영 교수님.png';
 import Kimtaegyun from './Asset/김태균 교수님.png';
 import Yoonjeongsik from './Asset/윤정식 교수님.png';
 import Yoonjinpil from './Asset/윤진필 연구원님.png';
-import TopButton from 'components/TopButton';
+import AboutMainMobile from './Asset/About_main_mobile.png';
 
 const OTHER_PROFESSOR = [
   { img: Yoonjeongsik, name: '윤정식 교수' },
@@ -34,6 +34,13 @@ export default function MajorIntroduce() {
         스마트제품 및 감성융합서비스 디자인 전문가 양성을 목표로 하고 있다.
         급변하는 현대 산업사회에서 능동적으로 디자인 문제를 발견하고, 창의적인
         디자인 솔루션을 제시할 수 있는 디자인 전문인력 양성에 중점을 두고 있다.
+      </div>
+      <div className={styles['mobile-major-image']}>
+        <img
+          className={styles['mobile-major-image']}
+          src={AboutMainMobile}
+          alt="main-thumnail"
+        />
       </div>
       <div className={styles['mobile-major-introduce-title']}>교수진 소개</div>
       <div className={styles['other-professor-section']}>

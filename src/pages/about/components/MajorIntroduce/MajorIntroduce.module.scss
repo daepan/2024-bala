@@ -17,7 +17,7 @@
   overflow: auto;
   background-size: cover;
   background-position: center;
-  background-image: url('./Asset/majorIntroduceBackImg.png');
+  background-image: url('./Asset/About_main.png');
 }
 
 .major-introduce-info {
@@ -25,7 +25,7 @@
   bottom: 60px;
   right: 124px;
   width: 629px;
-  color: #000;
+  color: #fff;
   font-family: Pretendard;
   font-size: 22px;
   font-style: normal;
@@ -202,6 +202,15 @@
   display: flex;
   flex-direction: column;
   padding: 90px 24px 153px 24px;
+}
+
+.mobile-major-image {
+  display: flex;
+  width: calc(100vw + 24px);
+  left: -24px;
+  position: relative;
+  object-fit: cover;
+  margin-bottom: 45px;
 }
 
 .mobile-major-introduce {
