@@ -8,12 +8,10 @@ function useScrollNav() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
+      if (currentScrollY > lastScrollY && currentScrollY > 0) {
         setShowNav(false);
       }
-      else if(currentScrollY === 0){
-        setShowNav(true); // 최상단일 때는 nav바를 항상 보여줌
-      } else {
+      else {
         setShowNav(true);
       }
 
