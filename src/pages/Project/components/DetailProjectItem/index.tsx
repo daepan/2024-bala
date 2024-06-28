@@ -14,7 +14,7 @@ function DetailProjectItem({title,name, productName, category, imgType}:DetailPr
   const adjustedProductName = productName === 'Re:Ver' ? 'Re' : productName;
   
   return (
-    <a className={styles['project-button']} href={`project/${productName}`}>
+    <a className={styles['project-button']} href={`project/${category}/${productName}`}>
       <div className={styles['container']}>
         <img
           className={styles['project-image']}

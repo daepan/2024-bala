@@ -2,3 +2,50 @@
 
 @include media.media-breakpoint(mobile) {
 }
+
+.project-top-image{
+  width: 100%;
+  @include media.media-breakpoint(mobile) {
+
+  }
+}
+
+.project-info{
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 200px;
+  margin-bottom: 112px;
+  @include media.media-breakpoint(mobile) {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.project-info-image{
+  width: 100%;
+}
+
+.project-designers{
+  margin-top: 81.5px;
+  @include media.media-breakpoint(mobile) {
+      margin-top: 40.5px;
+  }
+  &__title{
+    
+    color: #6170B5;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 48px */
+    letter-spacing: -0.44px;
+    @include media.media-breakpoint(mobile) {
+      
+      color: #6170B5;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+}
