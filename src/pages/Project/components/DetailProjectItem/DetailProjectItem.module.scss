@@ -2,13 +2,16 @@
 
 .project-button {
   text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  
   width: 496px;
-  height: 428px;
+  // height: 428px;
   border-radius: 12px;
   background: #fff;
 
@@ -34,8 +37,10 @@
 
 .project-image {
   border-radius: 12px;
+  height: 330px;
   @include media.media-breakpoint(mobile) {
     border-radius: 8px;
+    height: 120px;
   }
 }
 

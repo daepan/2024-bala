@@ -26,7 +26,7 @@ export default function Footer() {
             href="https://www.instagram.com/2024_ide_graduation?igsh=MW9lemdpYnRhZDhxYg==&utm_source=qr"
             rel="noreferrer"
             target="_blank"
-           >
+          >
             <InstagramIcon />
           </a>
           <a

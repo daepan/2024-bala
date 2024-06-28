@@ -9,7 +9,7 @@
   @include media.media-breakpoint(mobile) {
     display: flex;
     justify-content: center;
-    padding: 22px 0px 197px 0px;
+    padding: 22px 0px 50px 0px;
   }
 }
 
@@ -20,7 +20,7 @@
   max-width: 1520px;
   width: 100%;
   justify-items: center;
-  align-items: center;
+  // align-items: center;
 
   @include media.media-breakpoint(mobile) {
     display: grid;
@@ -28,6 +28,6 @@
     gap: 24px 7px;
     max-width: 327px;
     justify-items: center;
-    align-items: center;
+    // align-items: center;
   }
 }
