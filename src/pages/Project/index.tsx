@@ -3,6 +3,9 @@ import styles from './project.module.scss';
 import AllSection from './components/AllSection';
 import TopButton from 'components/TopButton';
 import useMediaQuery from 'utils/hooks/useMediaQuery';
+import MobilitySection from './components/MobilitySection';
+import CareSection from './components/CareSection';
+import LivingSection from './components/LivingSection';
 
 const TAB_LIST = ['All', 'Mobility', 'Care', 'Living'];
 
@@ -15,9 +18,9 @@ function Project() {
     <>
       <DetailTabs tabs={tabs} selected={currentTab} projectType={true} />
       {currentTab === TAB_LIST[0] && <AllSection />}
-      {currentTab === TAB_LIST[1] && <>Mobility</>}
-      {currentTab === TAB_LIST[2] && <>Care</>}
-      {currentTab === TAB_LIST[3] && <>Living</>}
+      {currentTab === TAB_LIST[1] && <MobilitySection/>}
+      {currentTab === TAB_LIST[2] && <CareSection/>}
+      {currentTab === TAB_LIST[3] && <LivingSection/>}
       {!isMobile && (
         <div className={styles['top-button']}>
           <TopButton />

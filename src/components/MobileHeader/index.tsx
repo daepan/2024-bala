@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { ReactComponent as MobileLogo } from 'assets/bala_logo_mobile.svg';
 import { ReactComponent as MobileMenu } from 'assets/main_menu_mobile.svg';
 import { ReactComponent as XIcon } from 'assets/close.svg';
-import { TAB_LIST } from 'pages/about';
+import { TAB_LIST } from 'pages/About';
 import styles from './MobileHeader.module.scss';
 
 export default function MobileHeader() {

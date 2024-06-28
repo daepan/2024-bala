@@ -1,9 +1,26 @@
+type DesignerDataType = {
+  student_number: number;
+  name: string;
+  name_en: string;
+};
+
+export type ProjectDataType = {
+  name: string;
+  productName: string;
+  category: string;
+  imgType: string;
+  designers: DesignerDataType[];
+  title: string;
+};
+
+
 export const PROJECTS = [
   {
     name: '원윤섭',
     productName: 'Soffi',
     category: 'Mobility',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2018151023,
         name: '원윤섭',
@@ -16,7 +33,8 @@ export const PROJECTS = [
     name: '김혜민, 이수빈',
     productName: 'Climb',
     category: 'Mobility',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2021151018,
         name: '김혜민',
@@ -34,7 +52,8 @@ export const PROJECTS = [
     name: '조용현',
     productName: 'Stretchroller',
     category: 'Mobility',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2019151036,
         name: '조용현',
@@ -47,7 +66,8 @@ export const PROJECTS = [
     name: '정해민, 사공도영',
     productName: 'GlideSurf',
     category: 'Mobility',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2019151035,
         name: '정해민',
@@ -65,7 +85,8 @@ export const PROJECTS = [
     name: '강호정, 김다준',
     productName: 'Seader',
     category: 'Mobility',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2021151002,
         name: '강호정',
@@ -83,7 +104,8 @@ export const PROJECTS = [
     name: '김지민, 백승선',
     productName: 'illo',
     category: 'Mobility',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2021151014,
         name: '김지민',
@@ -101,7 +123,8 @@ export const PROJECTS = [
     name: '신민우, 이승은',
     productName: 'Heasy',
     category: 'Mobility',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2019151023,
         name: '신민우',
@@ -119,7 +142,8 @@ export const PROJECTS = [
     name: '곽우령',
     productName: 'S-C-Roll',
     category: 'Mobility',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2021151005,
         name: '곽우령',
@@ -132,7 +156,8 @@ export const PROJECTS = [
     name: '김승규, 김익현',
     productName: 'EZ-Beesy',
     category: 'Care',
-    desginers: [
+    imgType:'png',
+    designers: [
       {
         student_number: 2019151008,
         name: '김승규',
@@ -150,7 +175,8 @@ export const PROJECTS = [
     name: '이예빈',
     productName: 'Fegeres',
     category: 'Care',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2021151038,
         name: '이예빈',
@@ -164,7 +190,8 @@ export const PROJECTS = [
     name: '오기석',
     productName: 'Roof',
     category: 'Care',
-    desginers: [
+    imgType:'png',
+    designers: [
       {
         student_number: 2021151051,
         name: '오기석',
@@ -177,7 +204,8 @@ export const PROJECTS = [
     name: '김두언, 최성일',
     productName: 'FORTO',
     category: 'Care',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2019151005,
         name: '김두언',
@@ -195,7 +223,8 @@ export const PROJECTS = [
     name: '박채연, 최혁수',
     productName: 'Savuoy',
     category: 'Care',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2021151024,
         name: '박채연',
@@ -213,7 +242,8 @@ export const PROJECTS = [
     name: '황민성, 천세강',
     productName: 'JOYNT',
     category: 'Care',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2019151045,
         name: '황민성',
@@ -231,7 +261,8 @@ export const PROJECTS = [
     name: '이시온, 최민경',
     productName: 'Walkmate',
     category: 'Care',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2020151037,
         name: '이시온',
@@ -249,7 +280,8 @@ export const PROJECTS = [
     name: '김이연, 김수현',
     productName: '낑',
     category: 'Living',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2021151011,
         name: '김이연',
@@ -267,7 +299,8 @@ export const PROJECTS = [
     name: '신동찬, 최성우',
     productName: 'futri',
     category: 'Living',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2021151028,
         name: '신동찬',
@@ -285,7 +318,8 @@ export const PROJECTS = [
     name: '김도훈, 김호빈',
     productName: 'PLAYBOOK',
     category: 'Living',
-    desginers: [
+    imgType:'png',
+    designers: [
       {
         student_number: 2021151049,
         name: '김도훈',
@@ -303,7 +337,8 @@ export const PROJECTS = [
     name: '이한',
     productName: 'Re:Ver',
     category: 'Living',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2019151032,
         name: '이한',
@@ -316,7 +351,8 @@ export const PROJECTS = [
     name: '김채은, 박정빈',
     productName: '북르륵',
     category: 'Living',
-    desginers: [
+    imgType:'png',
+    designers: [
       {
         student_number: 2021151016,
         name: '김채은',
@@ -334,7 +370,8 @@ export const PROJECTS = [
     name: '이서하',
     productName: 'Hiking',
     category: 'Living',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2019151033,
         name: '이서하',
@@ -347,7 +384,8 @@ export const PROJECTS = [
     name: '박지윤, 윤채원',
     productName: '맡겨줄개',
     category: 'Living',
-    desginers: [
+    imgType:'png',
+    designers: [
       {
         student_number: 2021151023,
         name: '박지윤',
@@ -365,7 +403,8 @@ export const PROJECTS = [
     name: '김정연',
     productName: 'Aira',
     category: 'Living',
-    desginers: [
+    imgType:'jpg',
+    designers: [
       {
         student_number: 2021151012,
         name: '김정연',
