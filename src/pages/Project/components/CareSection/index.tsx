@@ -10,12 +10,12 @@ function CareSection() {
   }
   let query = useQuery();
   const searchTerm = query.get("tab");
-  const test = findProjectByCategory(searchTerm!);
+  const projects = findProjectByCategory(searchTerm!);
 
   return ( 
   <div className={styles['container']}>
       <div className={styles['item-section']}>
-        {test?.map((project) => (
+        {projects?.map((project) => (
           <DetailProjectItem 
           key={project.name}
           title={project.title}
