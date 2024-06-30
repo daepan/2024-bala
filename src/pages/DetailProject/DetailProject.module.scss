@@ -2,3 +2,269 @@
 
 @include media.media-breakpoint(mobile) {
 }
+
+.project-top-image-section{
+  position: relative;
+  @include media.media-breakpoint(mobile) {
+
+  }
+  
+}
+
+.project-top-image{
+  width: 100%;
+  display: block;
+  @include media.media-breakpoint(mobile) {
+
+  }
+
+  &__info-section{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    // bottom: 130px;
+    // left: 200px;
+    bottom: 20%;
+    left: 11%;
+    @include media.media-breakpoint(mobile) {
+      gap: 2px;
+      bottom: 23px;
+      left: 27px;
+
+    }
+  }
+
+  &__name-section{
+    display: flex;
+    gap:9px;
+    align-items: end;
+
+  }
+
+  &__product-name{
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @include media.media-breakpoint(mobile) {
+      color: #FFF;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%; /* 38.4px */
+      letter-spacing: -0.264px;
+    }
+  }
+
+  &__name{
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    
+    @include media.media-breakpoint(mobile) {
+      padding-bottom: 4px;
+      color: #FFF;
+      font-family: Pretendard;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 22.4px */
+    }
+  }
+
+  &__title{
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+    min-width: 310px;
+
+  }
+
+}
+
+.project-info{
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 200px;
+  margin-bottom: 112px;
+  @include media.media-breakpoint(mobile) {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.project-info-image{
+  width: 100%;
+  display: block;
+}
+
+.project-designers{
+  margin-top: 81.5px;
+  @include media.media-breakpoint(mobile) {
+      margin-top: 40.5px;
+      padding-left: 24px; 
+  }
+  &__title{
+    position: relative;
+    color: #6170B5;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.44px;
+
+    @include media.media-breakpoint(mobile) {
+      width: 59px;
+      display: flex;
+      justify-content: center;
+      color: #6170B5;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  &__title-under-bar{
+    position: absolute;
+    height: 3px;
+    width: 189px;
+    bottom: -5px;
+    left: 0;
+    background: #6888BE;
+    @include media.media-breakpoint(mobile) {
+      width: 59px;
+      height: 1px;
+      bottom: -1px;
+
+    }
+  }
+
+  &__item-section{
+    display: flex;
+    gap:21px;
+    margin-top: 46px;
+    @include media.media-breakpoint(mobile) {
+      gap: 11px;
+      margin-top: 10px;
+    }
+  }
+
+  &__item{
+    width:374px;
+    padding:12px;
+    display: flex;
+    gap:24px;
+    @include media.media-breakpoint(mobile) {
+      width: 143px;
+      padding:5px 0;
+      gap:11px;
+    }
+
+  }
+
+  &__item-image{
+    width: 150px;
+    height: 199px;
+    border-radius: 8px;
+
+    @include media.media-breakpoint(mobile) {
+      width: 56px;
+      height: 74px;
+      border-radius: 8px;
+    }
+  }
+
+  &__item-info{
+    padding: 11px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media.media-breakpoint(mobile) {}
+    padding: 5px 0;
+  }
+
+  &__item-name-section{
+    @include media.media-breakpoint(mobile) {}
+
+
+  }
+
+  &__item-name-en-name{
+    color: #8E8E8E;
+    font-family: Pretendard;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 35.2px */
+    letter-spacing: -0.242px;
+
+    @include media.media-breakpoint(mobile) {
+      color: #8E8E8E;
+      /* Medium/12pt */
+      font-family: Pretendard;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+  }
+
+  &__item-name-kr-name{
+    color: #1F1F1F;
+    font-family: Pretendard;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 142.857% */
+    letter-spacing: -0.308px;
+
+    @include media.media-breakpoint(mobile) {
+      color: #1F1F1F;
+
+    /* Bold/12pt */
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    }
+  }
+
+  &__item-link{
+    color: #4B4B4B;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 28.8px */
+    text-decoration: none;
+
+    @include media.media-breakpoint(mobile) {
+      color: #4B4B4B;
+
+      /* Regular/10pt */
+      font-family: Pretendard;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+
+}

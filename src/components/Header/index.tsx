@@ -29,7 +29,7 @@ export default function Header() {
         >
           About
         </Link>
-        {/* <Link
+        <Link
           className={cn({
             [styles.header__item]: true,
             [styles['header__item--bar']]: true,
@@ -38,8 +38,8 @@ export default function Header() {
           to="/project"
         >
           Project
-        </Link> */}
-        <div
+        </Link>
+        {/* <div
           className={cn({
             [styles.header__item]: true,
             [styles['header__item--bar']]: true,
@@ -48,7 +48,7 @@ export default function Header() {
           onClick={() => alert('준비 중입니다.')}
         >
           Project
-        </div>
+        </div> */}
         <Link
           className={cn({
             [styles.header__item]: true,

@@ -1,19 +1,22 @@
 import DetailProjectItem from '../DetailProjectItem';
 import styles from './AllSection.module.scss';
+import { PROJECTS } from 'utils/constant/projects';
+
 
 function AllSection() {
-  //여기가 All에 대한 요소들이 들어있는 부분
-
+  
   return (
     <div className={styles['container']}>
       <div className={styles['item-section']}>
-        <DetailProjectItem />
-        <DetailProjectItem />
-        <DetailProjectItem />
-        <DetailProjectItem />
-        <DetailProjectItem />
-        <DetailProjectItem />
-        <DetailProjectItem />
+        {PROJECTS.map((project) => (
+          <DetailProjectItem 
+          key={project.name}
+          title={project.title}
+          name={project.name} 
+          productName={project.productName} 
+          category={project.category}
+          imgType={project.imgType}
+          />))}
       </div>
     </div>
   );

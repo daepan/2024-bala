@@ -1,33 +1,35 @@
 import useMediaQuery from 'utils/hooks/useMediaQuery';
 import styles from './DetailProjectItem.module.scss';
 
-const SAMPLE_DATA = {
-  id: 1,
-  title: '배가 편의성을 개선한 북카트 디자인',
-  designers: '김채은, 박정빈',
-};
-
-function DetailProjectItem() {
+interface DetailProjectItemProps {
+  title: string;
+  name: string;
+  productName: string;
+  category: string;
+  imgType: string;
+}
+function DetailProjectItem({title,name, productName, category, imgType}:DetailProjectItemProps) {
   const isMobile = useMediaQuery();
 
+  const adjustedProductName = productName === 'Re:Ver' ? 'Re' : productName;
+  
   return (
-    <a className={styles['project-button']} href={`project/${SAMPLE_DATA.id}`}>
+    <a className={styles['project-button']} href={`project/${category}/${productName}`}>
       <div className={styles['container']}>
         <img
           className={styles['project-image']}
-          src={
-            isMobile
-              ? 'https://via.placeholder.com/152x120'
-              : 'https://via.placeholder.com/496x329'
+          src={isMobile 
+            ?`${process.env.PUBLIC_URL}/products/${category}/${adjustedProductName}/${adjustedProductName}_2.${imgType}`
+            :`${process.env.PUBLIC_URL}/products/${category}/${adjustedProductName}/${adjustedProductName}_1.${imgType}`
           }
-        />
+        /> 
         <div className={styles['project-info']}>
           <span className={styles['project-info__title']}>
-            {SAMPLE_DATA.title}
+            {title}
           </span>
           {!isMobile && (
             <span className={styles['project-info__designers']}>
-              {SAMPLE_DATA.designers}
+              {name}
             </span>
           )}
         </div>
