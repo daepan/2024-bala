@@ -28,7 +28,7 @@ function DetailProject() {
       <img 
       className={styles['project-top-image']}
       src={isMobile 
-        ?`${process.env.PUBLIC_URL}/products/${category}/${adjustedProductName}/${adjustedProductName}_5.${imgType()}`
+        ?`${process.env.PUBLIC_URL}/products/${category}/${adjustedProductName}/${adjustedProductName}_5.${productName === '북르륵' ? 'jpg' : imgType()}`
         :`${process.env.PUBLIC_URL}/products/${category}/${adjustedProductName}/${adjustedProductName}_4.${imgType()}`
         }
       alt="product"
