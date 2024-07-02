@@ -8,29 +8,36 @@ interface DetailProjectItemProps {
   category: string;
   imgType: string;
 }
-function DetailProjectItem({title,name, productName, category, imgType}:DetailProjectItemProps) {
+function DetailProjectItem({
+  title,
+  name,
+  productName,
+  category,
+  imgType
+}: DetailProjectItemProps) {
   const isMobile = useMediaQuery();
 
   const adjustedProductName = productName === 'Re:Ver' ? 'Re' : productName;
-  
+
   return (
-    <a className={styles['project-button']} href={`project/${category}/${productName}`}>
+    <a
+      className={styles['project-button']}
+      href={`project/${category}/${productName}`}
+    >
       <div className={styles['container']}>
         <img
           className={styles['project-image']}
-          src={isMobile 
-            ?`${process.env.PUBLIC_URL}/products/${category}/${adjustedProductName}/${adjustedProductName}_2.${imgType}`
-            :`${process.env.PUBLIC_URL}/products/${category}/${adjustedProductName}/${adjustedProductName}_1.${imgType}`
+          src={
+            isMobile
+              ? `${process.env.PUBLIC_URL}/products/${category}/${adjustedProductName}/${adjustedProductName}_2.${imgType}`
+              : `${process.env.PUBLIC_URL}/products/${category}/${adjustedProductName}/${adjustedProductName}_1.${imgType}`
           }
-        /> 
+          alt="project-main"
+        />
         <div className={styles['project-info']}>
-          <span className={styles['project-info__title']}>
-            {title}
-          </span>
+          <span className={styles['project-info__title']}>{title}</span>
           {!isMobile && (
-            <span className={styles['project-info__designers']}>
-              {name}
-            </span>
+            <span className={styles['project-info__designers']}>{name}</span>
           )}
         </div>
       </div>

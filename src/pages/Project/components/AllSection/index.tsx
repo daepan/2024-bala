@@ -1,22 +1,32 @@
 import DetailProjectItem from '../DetailProjectItem';
 import styles from './AllSection.module.scss';
-import { PROJECTS } from 'utils/constant/projects';
+import { PROJECTS, ProjectDataType } from 'utils/constant/projects';
 
+export function shuffleProjectArray(
+  array: ProjectDataType[] | undefined
+): ProjectDataType[] {
+  if (array === undefined) return [];
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 function AllSection() {
-  
   return (
     <div className={styles['container']}>
       <div className={styles['item-section']}>
-        {PROJECTS.map((project) => (
-          <DetailProjectItem 
-          key={project.name}
-          title={project.title}
-          name={project.name} 
-          productName={project.productName} 
-          category={project.category}
-          imgType={project.imgType}
-          />))}
+        {shuffleProjectArray(PROJECTS).map(project => (
+          <DetailProjectItem
+            key={project.name}
+            title={project.title}
+            name={project.name}
+            productName={project.productName}
+            category={project.category}
+            imgType={project.imgType}
+          />
+        ))}
       </div>
     </div>
   );

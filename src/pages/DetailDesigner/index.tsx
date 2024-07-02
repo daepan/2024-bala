@@ -1,21 +1,34 @@
 import { ReactComponent as LinkLogo } from './Assets/link_logo.svg';
 import { ReactComponent as InstaLogo } from './Assets/insta_logo.svg';
 import { ReactComponent as MessageLogo } from './Assets/message_logo.svg';
-import { ReactComponent as Plant } from './Assets/plant.svg';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import cn from 'utils/ts/classnames';
 import findProfilesByStudentNumber from 'utils/ts/findProfilesByStudentNumber';
 import styles from './DetailDesigner.module.scss';
+import { PROJECTS } from 'utils/constant/projects';
 import TopButton from 'components/TopButton';
 import useScrollToTop from 'utils/hooks/useScrollToTop';
 import useMediaQuery from 'utils/hooks/useMediaQuery';
+
+function findProjectByName(name: string | undefined) {
+  if (!name) return null;
+  return PROJECTS.find(project => project.name.includes(name));
+}
 
 function DetailDesigner() {
   useScrollToTop();
   const isMobile = useMediaQuery();
   const params = useParams();
+  const navigate = useNavigate();
   const userData = findProfilesByStudentNumber(
     params.id ? Number(params.id) : 2021151016
   );
+  const userProject = findProjectByName(userData?.name);
+  const adjustedProductName =
+    userProject?.productName === 'Re:Ver' ? 'Re' : userProject?.productName;
+  const onClickProject = () => {
+    navigate(`/project/${userProject?.category}/${userProject?.productName}`);
+  };
   return (
     <div className={styles.template}>
       {!isMobile && (
@@ -134,8 +147,45 @@ function DetailDesigner() {
       <div className={styles.more}>
         <div className={styles.more__title}>작품 더보기</div>
         <div className={styles.more__content}>
+          <div className={styles.card} onClick={() => onClickProject()}>
+            <img
+              className={styles.card__img}
+              src={
+                isMobile
+                  ? `${process.env.PUBLIC_URL}/products/${userProject?.category}/${adjustedProductName}/${adjustedProductName}_2.${userProject?.imgType}`
+                  : `${process.env.PUBLIC_URL}/products/${userProject?.category}/${adjustedProductName}/${adjustedProductName}_1.${userProject?.imgType}`
+              }
+              alt="project-main"
+            />
+            <div
+              className={cn({
+                [styles.card__description]: true,
+                [styles['card__description--project']]: true
+              })}
+            >
+              <div
+                className={cn({
+                  [styles.card__title]: true,
+                  [styles['card__title--project']]: true
+                })}
+              >
+                {userProject?.title}
+              </div>
+              <div className={styles.card__content}>
+                {!isMobile && (
+                  <span className={styles.card__content}>
+                    {userProject?.name}
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
           <div className={styles.card}>
-            <Plant className={styles.card__img} />
+            <img
+              src={`${process.env.PUBLIC_URL}/plant/${userData?.name}.png`}
+              className={styles.card__img}
+              alt="plant"
+            />
             <div className={styles.card__description}>
               <div className={styles.card__title}>
                 {userData?.plant_category} | {userData?.plant_name}

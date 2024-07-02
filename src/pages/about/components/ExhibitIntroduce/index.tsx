@@ -6,19 +6,17 @@ import mobility from './Asset/mobility.png';
 import care from './Asset/care.png';
 import living from './Asset/living.png';
 import cn from 'utils/ts/classnames';
-import { ReactComponent as ToTheTopIcon } from 'Asset/to-the-top.svg';
 import { ReactComponent as KoreatechIcon } from 'Asset/koreatech.svg';
 import { ReactComponent as DscIcon } from 'Asset/dsc.svg';
 import { ReactComponent as IdeIcon } from 'Asset/ide.svg';
 import { ReactComponent as LincIcon } from 'Asset/linc.svg';
 import { ReactComponent as SeedkeeperIcon } from 'Asset/seedkeeper.svg';
 import { ReactComponent as SmartHumanInterfaceIcon } from 'Asset/smart-human-interface.svg';
-import TopButton from 'components/TopButton';
 
 
 const MEMBERS = [
   {
-    group: '위원단장',
+    group: '위원장단',
     member: ['강호정', '황민성']
   },
   {
