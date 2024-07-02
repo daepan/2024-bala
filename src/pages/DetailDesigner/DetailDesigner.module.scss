@@ -396,6 +396,13 @@
 
   &__content {
     margin-top: 77px;
+    display: flex;
+    width: 64%;
+    justify-content: space-between;
+
+    @include media.media-breakpoint(mobile) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -431,6 +438,16 @@
       font-weight: 700;
       line-height: normal;
     }
+
+    &--project {
+      color: #1f1f1f;
+      font-family: Pretendard;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 40px;
+      letter-spacing: -0.308px;
+    }
   }
 
   &__content {
@@ -457,6 +474,11 @@
     @include media.media-breakpoint(mobile) {
       width: calc(100% - 48px);
       padding: 16px 24px;
+    }
+
+    &--project {
+      width: calc(100% - 48px);
+      padding: 0px 24px 16px;
     }
   }
 }
