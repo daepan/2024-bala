@@ -1,7 +1,6 @@
 import React from 'react';
 import cn from 'utils/ts/classnames';
-import { createSearchParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, createSearchParams } from 'react-router-dom';
 import { ReactComponent as MobileLogo } from 'assets/bala_logo_mobile.svg';
 import { ReactComponent as MobileMenu } from 'assets/main_menu_mobile.svg';
 import { ReactComponent as XIcon } from 'assets/close.svg';
@@ -19,6 +18,12 @@ export default function MobileHeader() {
   const onClickAboutToggle = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     setAboutToggle(current => !current);
+  };
+
+  const onClickProject = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setMenuToggle(false);
+    navigate('/project');
   };
 
   const onClickTab = (e: React.MouseEvent<HTMLDivElement>, tab: string) => {
@@ -99,7 +104,7 @@ export default function MobileHeader() {
           {/* <Link className={styles.item} to="/project">
             PROJECT
           </Link> */}
-          <div className={styles.item} onClick={() => alert('준비중입니다.')}>
+          <div className={styles.item} onClick={e => onClickProject(e)}>
             PROJECT
           </div>
           <div className={styles.item} onClick={e => onClickDesigner(e)}>
