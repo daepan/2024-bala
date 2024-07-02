@@ -397,11 +397,18 @@
   &__content {
     margin-top: 77px;
     display: flex;
-    width: 64%;
+    //width: 64%;
+    max-width: 1144px;
+    width: 100%;
     justify-content: space-between;
 
     @include media.media-breakpoint(mobile) {
+      margin-top: 44px;
+
       flex-direction: column;
+      gap:23px;
+      max-width: 325px;
+      width: 100%;
     }
   }
 }
@@ -447,6 +454,19 @@
       font-weight: 600;
       line-height: 40px;
       letter-spacing: -0.308px;
+
+      @include media.media-breakpoint(mobile) {
+      color: #1F1F1F;
+
+      /* Bold/18pt */
+      font-family: Pretendard;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      }
+
+
     }
   }
 
@@ -469,16 +489,18 @@
   }
 
   &__description {
-    margin-top: 16px;
+    padding: 16px 24px;
 
     @include media.media-breakpoint(mobile) {
+      max-width: 277px;
       width: calc(100% - 48px);
       padding: 16px 24px;
     }
 
     &--project {
+      max-width: 448px;
       width: calc(100% - 48px);
-      padding: 0px 24px 16px;
+      padding: 16px 24px;
     }
   }
 }
