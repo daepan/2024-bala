@@ -1,7 +1,6 @@
 import { ReactComponent as LinkLogo } from './Assets/link_logo.svg';
 import { ReactComponent as InstaLogo } from './Assets/insta_logo.svg';
 import { ReactComponent as MessageLogo } from './Assets/message_logo.svg';
-import { ReactComponent as Plant } from './Assets/plant.svg';
 import { useParams } from 'react-router-dom';
 import findProfilesByStudentNumber from 'utils/ts/findProfilesByStudentNumber';
 import styles from './DetailDesigner.module.scss';
@@ -135,7 +134,7 @@ function DetailDesigner() {
         <div className={styles.more__title}>작품 더보기</div>
         <div className={styles.more__content}>
           <div className={styles.card}>
-            <Plant className={styles.card__img} />
+            <img src={`${process.env.PUBLIC_URL}/plant/${userData?.name}.png`} className={styles.card__img} alt="plant"/>
             <div className={styles.card__description}>
               <div className={styles.card__title}>
                 {userData?.plant_category} | {userData?.plant_name}
