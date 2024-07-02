@@ -3,6 +3,8 @@ import styles from './DetailProject.module.scss';
 import { useParams } from 'react-router-dom';
 import useScrollToTop from 'utils/hooks/useScrollToTop';
 import findProjectByProjectName from 'utils/ts/findProjectByProjectName';
+import cn from 'utils/ts/classnames';
+
 
 function DetailProject() {
   useScrollToTop();
@@ -25,17 +27,30 @@ function DetailProject() {
     return 'jpg';
   };
 
+  const fontColorType = () => {
+    if (
+      productName === 'FORTO' ||
+      productName === 'Roof' ||
+      productName === 'JOYNT' ||
+      productName === 'Aira' ||
+      productName === '맡겨줄개' ||
+      productName === 'futri' ||
+      productName === 'Seader' ||
+      productName === 'Climb' ||
+      productName === 'GlideSurf' 
+    ) {
+      return 'black';
+    }
+    return 'white';
+  };
+
   const designer = findProjectByProjectName(
     adjustedProductNameReverse!
   )?.designers;
   const title = findProjectByProjectName(adjustedProductNameReverse!)?.title;
   const name = findProjectByProjectName(adjustedProductNameReverse!)?.name;
+  const fontColor = fontColorType();
 
-  console.log(
-    `${
-      process.env.PUBLIC_URL
-    }/products/${category}/${adjustedProductName}/${adjustedProductName}_6-${2}.${imgType()}`
-  );
   return (
     <>
       <div className={styles['project-top-image-section']}>
@@ -57,19 +72,37 @@ function DetailProject() {
         {isMobile ? (
           <div className={styles['project-top-image__info-section']}>
             <div className={styles['project-top-image__name-section']}>
-              <div className={styles['project-top-image__product-name']}>
+              <div 
+              className={cn({
+                [styles['project-top-image__product-name']]: fontColor=== 'white',
+                [styles['project-top-image__product-name--black']]: fontColor === 'black',
+              })}>
                 {productName}
               </div>
-              <div className={styles['project-top-image__name']}>{name}</div>
+              <div className={cn({
+                [styles['project-top-image__name']]: fontColor === 'white',
+                [styles['project-top-image__name--black']]: fontColor === 'black',
+              })}>
+              {name}</div>
             </div>
-            <div className={styles['project-top-image__title']}>{title}</div>
+            <div className={cn({
+                [styles['project-top-image__title']]: fontColor === 'white',
+                [styles['project-top-image__title--black']]: fontColor === 'black',
+              })}>
+            {title}</div>
           </div>
         ) : (
           <div className={styles['project-top-image__info-section']}>
-            <div className={styles['project-top-image__product-name']}>
+            <div className={cn({
+                [styles['project-top-image__product-name']]: fontColor === 'white',
+                [styles['project-top-image__product-name--black']]: fontColor === 'black',
+              })}>
               {productName}
             </div>
-            <div className={styles['project-top-image__name']}>{name}</div>
+            <div className={cn({
+                [styles['project-top-image__name']]: fontColor === 'white',
+                [styles['project-top-image__name--black']]: fontColor === 'black',
+              })}>{name}</div>
           </div>
         )}
       </div>

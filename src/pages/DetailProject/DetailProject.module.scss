@@ -50,6 +50,15 @@
     font-weight: 600;
     line-height: normal;
 
+    &--black{
+      color: #000;
+      font-family: Pretendard;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
     @include media.media-breakpoint(mobile) {
       color: #FFF;
       font-family: Pretendard;
@@ -58,8 +67,19 @@
       font-weight: 700;
       line-height: 160%; /* 38.4px */
       letter-spacing: -0.264px;
+      
+      &--black{
+        color: #000;
+        font-family: Pretendard;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%; /* 38.4px */
+        letter-spacing: -0.264px;
+      }
     }
   }
+  
 
   &__name{
     color: #FFF;
@@ -68,8 +88,16 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    
+    &--black{
+      color: #000;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
     @include media.media-breakpoint(mobile) {
+      
       padding-bottom: 4px;
       color: #FFF;
       font-family: Pretendard;
@@ -77,6 +105,15 @@
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 22.4px */
+      &--black{
+      color: #000;
+      padding-bottom: 4px;
+      font-family: Pretendard;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 22.4px */
+    }
     }
   }
 
@@ -88,7 +125,15 @@
     font-weight: 400;
     line-height: 160%; /* 25.6px */
     min-width: 310px;
-
+    &--black{
+      color: #000;
+      font-family: Pretendard;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 25.6px */
+      min-width: 310px;
+    }
   }
 
 }
