@@ -489,7 +489,7 @@
   }
 
   &__description {
-    padding: 16px 24px;
+    padding: 16px 0;
 
     @include media.media-breakpoint(mobile) {
       max-width: 277px;
