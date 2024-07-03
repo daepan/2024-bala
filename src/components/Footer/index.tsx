@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
       <div className={styles['mobile-footer-section__address']}>
         31253) 충청남도 천안시 동남구 병천면 충절로 1600 <br />
-        한국기술교육대학교공학2관 디자인공학전공
+        한국기술교육대학교 공학2관 디자인공학전공
       </div>
       <div className={styles['mobile-footer-section__copyright']}>
         COPYRIGHT Ⓒ 2024. <br />
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
         <div className={styles['footer-section__address']}>
           31253) 충청남도 천안시 동남구 병천면 충절로 1600
-          한국기술교육대학교공학2관 디자인공학전공
+          한국기술교육대학교 공학2관 디자인공학전공
         </div>
         <div className={styles['footer-section__copyright']}>
           COPYRIGHT Ⓒ 2024. KOREATECH. ALL RIGHT RESERVED.

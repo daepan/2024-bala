@@ -172,11 +172,11 @@ function DetailDesigner() {
                 {userProject?.title}
               </div>
               <div className={styles.card__content}>
-                {!isMobile && (
+                {/* {!isMobile && ( */}
                   <span className={styles.card__content}>
                     {userProject?.name}
                   </span>
-                )}
+                {/* )} */}
               </div>
             </div>
           </div>
