@@ -30,7 +30,7 @@ export default function Footer() {
             <InstagramIcon />
           </a>
           <a
-            href="www.youtube.com/@2024_ide_graduation"
+            href="https://www.youtube.com/@2024_ide_graduation"
             rel="noreferrer"
             target="_blank"
           >
@@ -102,7 +102,7 @@ export default function Footer() {
             <InstagramIcon />
           </a>
           <a
-            href="www.youtube.com/@2024_ide_graduation"
+            href="https://www.youtube.com/@2024_ide_graduation"
             rel="noreferrer"
             target="_blank"
           >
